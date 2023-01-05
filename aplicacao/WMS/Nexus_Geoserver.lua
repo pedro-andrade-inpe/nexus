@@ -23,7 +23,7 @@ Layer{project = p, service = service, name = "bacias", map = "bacias"}
 Layer{project = p, service = service, name = "biomas", map = "biomas_nexus"}
 
 Application{
-	key = "AIzaSyA1coAth-Bo7m99rnxOm2oOBB88AmaSbOk",
+	key = "",
 	project = p,
 	base = "roadmap",
 	title = "Nexus - Caminhos para a sustentabilidade",
