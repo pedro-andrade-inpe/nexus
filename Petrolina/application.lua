@@ -23,17 +23,17 @@ Application{
 	
 	points = View{
 		description = "descrição a ser inserida aqui.",
-		select = {"Nome","ponto"},
-		icon = {"yellow_home", "green_home"},
-		label = {"point1", "point2"},
+		select = "Ponto",
+		icon = "flag",
+		label = "ponto de coleta",
 
 		report = function(cell)
 			local mreport = Report{
-				title = cell.name,  -- "name" is an attribute of object
+				title = cell.Nome,  -- "name" is an attribute of object
 				author = "NEXUS"
 			}
 
-				mreport:addImage("photos/"..cell.Nome..".jpg")
+				mreport:addImage("photos/"..cell.Fotografia)
 
 			return mreport
 		end
