@@ -24,17 +24,17 @@ Application{
     points = View{
         missing = 1,
         description = "Campina grande",
-        select = {"nome", "ponto"},
-        icon = {"yellow_home", "green_home"},
-        label = {"point1", "point2"},
+        select = "Ponto",
+        icon = "flag",
+        label = "ponto de coleta",
 
         report = function(cell)
             local mreport = Report{
-                title = cell.name,  -- "name" is an attribute of object
+                title = cell.Nome,  -- "name" is an attribute of object
                 author = "NEXUS"
             }
                 
-                mreport:addImage("photos/"..cell.name..".jpg")
+                mreport:addImage("photos/"..cell.Fotografia..".jpg")
 
             return mreport
         end
