@@ -8,7 +8,7 @@ Application{
     project = "campina-g.tview",
     description = "Small application with some data related to Campina Grande.",
 	base = "roadmap",
-    zoom = 7,
+    zoom = 10.3,
 	template = {navbar = "darkblue", title = "white"},
     display = false,
 

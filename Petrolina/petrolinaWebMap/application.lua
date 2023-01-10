@@ -8,7 +8,7 @@ Application{
 	project = "petrolina.tview",
 	description = "Small application with some data related to Petrolina.",
 	base = "roadmap",
-	zoom = 7,
+	zoom = 8.3,
 	template = {navbar = "darkblue", title = "white"},
 	display = false,
 
