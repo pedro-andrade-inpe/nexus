@@ -33,7 +33,7 @@ Application{
 				author = "NEXUS"
 			}
 
-				mreport:addImage("photos/"..cell.Fotografia)
+				mreport:addImage("photos/"..cell.Fotografia..".jpg")
 
 			return mreport
 		end
