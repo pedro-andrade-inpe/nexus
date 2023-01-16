@@ -6,7 +6,7 @@ Project{
   file = "petrolina.tview", 
 	author = "NEXUS",
 	clean = true,
-	trajectory = "Trajetos_Petrolina_unica_linha.shp",
+	trajectory = "Trajetos_Petrolina_novo.shp",
 	points = "Pontos_campo_solos_agosto_comunicacao.shp",
 }
 

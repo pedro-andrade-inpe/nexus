@@ -6,12 +6,12 @@
   <Author>NEXUS</Author>
 
   <te_da:DataSourceList xmlns:te_common="http://www.terralib.org/schemas/common">
-    <te_da:DataSource access_driver="OGR" id="5c7efed8-931e-4271-9115-bf3255ff5860" type="OGR">
+    <te_da:DataSource access_driver="OGR" id="2bf9f5b5-2448-4ee5-a165-e6f4ada117c1" type="OGR">
       <te_da:Title>trajectory</te_da:Title>
       <te_da:Description>Created on TerraME</te_da:Description>
-      <te_da:URI>file%3A%2F%2F%2Fopt%2Flampp%2Fhtdocs%2Fnexus%2FCampina_Grande%2FTrajetos_Campina_Grande_Queimadas_unica_linha.shp</te_da:URI>
+      <te_da:URI>file%3A%2F%2F%2Fopt%2Flampp%2Fhtdocs%2Fnexus%2FCampina_Grande%2FTrajetos_Campina_Grande_Queimadas_novo.shp</te_da:URI>
     </te_da:DataSource>
-    <te_da:DataSource access_driver="OGR" id="eef32c7c-da2e-4220-ba5a-ec3ea46a8a4e" type="OGR">
+    <te_da:DataSource access_driver="OGR" id="ef34b410-68ab-4dc3-9514-835c18a35054" type="OGR">
       <te_da:Title>points</te_da:Title>
       <te_da:Description>Created on TerraME</te_da:Description>
       <te_da:URI>file%3A%2F%2F%2Fopt%2Flampp%2Fhtdocs%2Fnexus%2FCampina_Grande%2FPontos_campo_solos_abril_comunicacao.shp</te_da:URI>
@@ -21,17 +21,17 @@
   <ComponentList/>
 
   <te_map:LayerList>
-    <te_map:DataSetLayer id="47e17778-9aa3-4e0e-81bb-f56ee53cb77c">
+    <te_map:DataSetLayer id="1de9ac06-6b0e-4fc5-a7c8-685dbb6c89c8">
       <te_map:Title>trajectory</te_map:Title>
       <te_map:Visible>NOT_VISIBLE</te_map:Visible>
       <te_map:Encoding>ISO-8859-1</te_map:Encoding>
-      <te_map:DataSetName>Trajetos_Campina_Grande_Queimadas_unica_linha</te_map:DataSetName>
-      <te_map:DataSourceId>5c7efed8-931e-4271-9115-bf3255ff5860</te_map:DataSourceId>
+      <te_map:DataSetName>Trajetos_Campina_Grande_Queimadas_novo</te_map:DataSetName>
+      <te_map:DataSourceId>2bf9f5b5-2448-4ee5-a165-e6f4ada117c1</te_map:DataSourceId>
       <te_map:SRSInfo>
         <te_map:SRID>4674</te_map:SRID>
         <te_map:Proj4>+proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs</te_map:Proj4>
       </te_map:SRSInfo>
-      <te_map:Extent llx="-36.534909813229483" lly="-7.5423736815602904" urx="-35.825488349229005" ury="-7.032214140306654"/>
+      <te_map:Extent llx="-36.534909813229483" lly="-7.5423736815602904" urx="-35.825488349229005" ury="-7.0322098100000003"/>
       <te_map:RendererId>ABSTRACT_LAYER_RENDERER</te_map:RendererId>
       <te_map:CompositionMode>0</te_map:CompositionMode>
       <te_map:Style>
@@ -105,12 +105,12 @@
         </se:FeatureTypeStyle>
       </te_map:SelectionStyle>
     </te_map:DataSetLayer>
-    <te_map:DataSetLayer id="f4aa5e1d-1f86-423c-8b59-369e4d9019a6">
+    <te_map:DataSetLayer id="790c0f7c-cb24-4be5-a09b-4045b30b8547">
       <te_map:Title>points</te_map:Title>
       <te_map:Visible>NOT_VISIBLE</te_map:Visible>
       <te_map:Encoding>ISO-8859-1</te_map:Encoding>
       <te_map:DataSetName>Pontos_campo_solos_abril_comunicacao</te_map:DataSetName>
-      <te_map:DataSourceId>eef32c7c-da2e-4220-ba5a-ec3ea46a8a4e</te_map:DataSourceId>
+      <te_map:DataSourceId>ef34b410-68ab-4dc3-9514-835c18a35054</te_map:DataSourceId>
       <te_map:SRSInfo>
         <te_map:SRID>4674</te_map:SRID>
         <te_map:Proj4>+proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs</te_map:Proj4>
