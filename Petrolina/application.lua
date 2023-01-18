@@ -5,6 +5,7 @@ local description = [[
 ]]
 
 Application{
+	key = "AIzaSyA1coAth-Bo7m99rnxOm2oOBB88AmaSbOk",
 	project = "petrolina.tview",
 	description = "Small application with some data related to Petrolina.",
 	base = "roadmap",
