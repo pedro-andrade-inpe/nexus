@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<title>Nexus - Caminhos para a sustentabilidade</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+		<link rel="stylesheet" href="./publish.min.css"/>
+	</head>
+	<body>
+		<div class="container">
+			<nav class="navbar navbar-fixed-top navbar-light" style="background-color: #1ea789;" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand custom-font-app-title" style="color: white;">Nexus - Caminhos para a sustentabilidade</a>
+					</div>
+					
+				</div>
+			</nav>
+		</div>
+		<div class="navbar-offset"></div>
+		<div id="map-canvas">
+			<div id="map"></div>
+		</div>
+		<div class="row main-row">
+		<!-- Menu -->
+			<div class="col-sm-4 col-md-2 sidebar sidebar-left pull-left">
+				<div class="panel-group sidebar-body panel-height" id="accordion-left">
+					<div class="panel panel-default">
+						<div class="panel-heading padding-header" >
+							<h4 class="panel-title custom-font-subtitle border body-font-color">
+								<i class=""></i><a id="layers-title" data-toggle="collapse" href="#layers"> Layers</a>
+								<span class="pull-right slide-submenu icon-style"><i class="fa fa-times"></i></span>
+							</h4>
+						</div>
+						<div id="layers" class="panel-collapse collapse in overflow-y">
+								<div class="panel-body list-group padding-body">
+										<label>
+											<input name="Municipios" type="checkbox">
+											<a id="Municipios" href="javascript:void(0);"> Municipios </a>
+										</label>
+										<label>
+											<input name="Bacias" type="checkbox">
+											<a id="Bacias" href="javascript:void(0);"> Bacias </a>
+										</label>
+										<label>
+											<input name="Biomas" type="checkbox">
+											<a id="Biomas" href="javascript:void(0);"> Biomas </a>
+										</label>
+								</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading padding-header">
+							<h4 class="panel-title custom-font-subtitle border body-font-color">
+								<i class=""></i><a id="description-title" data-toggle="collapse" href="#properties"> Description</a>
+							</h4>
+						</div>
+						<div id="properties" class="panel-collapse collapse overflow-y">
+							<div class="panel-body padding-body">
+								<p class="custom-font-body" id="layer-description"></p>
+								<button id="more" type="button" class="btn btn-default custom-font-more" style="display:none;">
+									More
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading padding-header">
+							<h4 class="panel-title custom-font-subtitle border body-font-color">
+								<i class=""></i><a id="legend-title" data-toggle="collapse" href="#legends"> Legend</a>
+							</h4>
+						</div>
+						<div id="legends" class="panel-collapse collapse overflow-y">
+							<div id="legend" class="panel-body padding-body custom-font-legend"></div>
+						</div>
+					</div>
+					<div id="panel-download" class="panel panel-default">
+						<div class="panel-heading padding-header" style="height: 29px;">
+							<h4 class="panel-title custom-font-subtitle border body-font-color">
+								<i class="fa fa-download"></i><a id="download-title"> Download</a>
+							</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- fim do menu -->
+		</div>
+		<div class="mini-submenu mini-submenu-left pull-left icon-style">
+			<i class="fa fa-bars"></i>
+		</div>
+		<img id="loader" src="./default.gif" hidden="hidden"/>
+		<div id="loader-message"><h4 id="loader-message-text"></h4></div>
+		<footer class="navbar-default navbar-fixed-bottom">
+			<div id="footer" class="container-fluid">
+				<p>Powered by package <a href="https://github.com/TerraME/publish" target="_blank">publish</a> of <a href="http://www.terrame.org" target="_blank">TerraME</a>.</p>
+			</div>
+		</footer>
+		<div class="modal fade modal-player" id="modal-app-description" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title custom-font-subtitle">Nexus - Caminhos para a sustentabilidade</h4>
+					</div>
+					<div class="modal-body">
+						<p class="custom-font-body">Os biomas <b>Cerrado e Caatinga</b> possuem os principais estoques de terras disponíveis para expansão agrícola no Brasil, além de áreas de elevado potencial solar e eólico. Seus recursos naturais são essenciais para a regulação do clima e bem-estar humano.<br>O objetivo geral do projeto NEXUS é propor estratégias que permitam a transição para um futuro sustentável nesses dois biomas, através de uma abordagem participativa capaz de integrar métodos qualitativos e quantitativos das ciências naturais e sociais em múltiplas escalas. Para tanto, serão definidos cenários e indicadores que conciliem as dimensões econômica, social e ambiental (os três pilares da sustentabilidade) na produção agrícola e energética, bem como no uso de recursos naturais.<h2>Etapas do Projeto</h2><p>O NEXUS está organizado em três etapas transversais no desenvolvimento da pesquisa.</p><p>A <b>Etapa 1</b> produzirá indicadores sobre as dimensões social, econômica, institucional e ambiental da área de estudo, visando à construção de índices de sustentabilidade que reflitam a situação atual (passado e presente) em alinhamento com as demandas nacionais.</p><p>A <b>Etapa 2</b> abordará o futuro da área de estudo, em um processo participativo de construção de cenários qualitativos e quantitativos. Para isso, serão geradas projeções espacialmente explícitas de mudanças de uso da terra, do clima regional e seus impactos.</p><p>A <b>Etapa 3</b> englobará atividades de síntese entre as escalas, assim como de análise de mecanismos de transformação social, visando apresentar caminhos que levem à transição para a sustentabilidade.</p></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-info" data-dismiss="modal">Ok</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade modal-player" id="modal-report-MunicipiosJanuaria" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h2 class="modal-title custom-font-report-title" id="modal-report-label-MunicipiosJanuaria"> Januaria (MG)</h2>
+						<p class="text-muted custom-font-body">Fontes: IBGE, Projeto Nexus, Wikipedia, Prefeitura Municipal de Januaria e Google Maps</p>
+					</div>
+					<div class="modal-body" id="modal-report-text-MunicipiosJanuaria">
+													<img class="report-img" src="Bandeira_januaria.jpeg"/>
+							<br/>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+						<!-- Function addTable -->
+						<div>
+							<table class="table-bordered table table-hover table-responsive" id="data">
+								<tr>
+									<th colspan="100%" class="text-center"><h2>Características do território</h2></th>
+								</tr>
+								<tr>
+								</tr>
+										<tr>
+											<td><b>Área</b><sup>[2018]</sup><br>6.661,588Km</td><td><b>População</b><sup>[2019]</sup><br>67.742 hab.</td><td><b>Densidade demográfica</b><br>9,83 hab/Km²</td><td><b>Escolarização</b><sup>6 a 14 anos</sup><br>96,4%</td>
+										</tr>
+										<tr>
+											<td><b>IDHM</b><sup>[2010]</sup><br>0,658</td><td><b>Ano de  instalação</b><br>1833</td><td><b>Microregião</b><br>Januária</td><td><b>Mesorregião</b><br>Norte de Minas</td>
+										</tr>
+							</table>
+						</div>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+						<!-- Function addGraphic -->
+							<table class=" table table-hover Januaria-0 hidden" id="data">
+								<tr>
+									<th colspan="100%" class="text-center"><b>IDHM</b> Índice de Desenvolvimento Humano Municipal</th>
+								</tr>
+								<tr>
+									<th></th>
+										<th>1991</th>
+										<th>2000</th>
+										<th>2010</th>
+								</tr>
+										<tr>
+											<td>IDHM</td><td>0.391</td><td>0.541</td><td>0.658</td>
+										</tr>
+							</table>
+							<div style="width: 800px; height: 500px">
+								<br/>
+								<canvas class="chart" id="Januaria-0" ></canvas>
+								<br/>
+							</div>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+						<!-- Function addGraphic -->
+							<table class="bar table table-hover Januaria-1 hidden" id="data">
+								<tr>
+									<th colspan="100%" class="text-center">Mortalidade Infantil - óbitos por mil nascidos vivos</th>
+								</tr>
+								<tr>
+									<th></th>
+										<th>2006</th>
+										<th>2007</th>
+										<th>2008</th>
+										<th>2009</th>
+										<th>2010</th>
+										<th>2011</th>
+										<th>2012</th>
+										<th>2013</th>
+										<th>2014</th>
+										<th>2015</th>
+										<th>2016</th>
+										<th>2017</th>
+								</tr>
+										<tr>
+											<td>Mortalidade</td><td>10.66</td><td>8.51</td><td>14.67</td><td>9.05</td><td>13.62</td><td>11.94</td><td>15.23</td><td>12.83</td><td>23.26</td><td>21.01</td><td>19.76</td><td>11.59</td>
+										</tr>
+							</table>
+							<div style="width: 800px; height: 500px">
+								<br/>
+								<canvas class="chart" id="Januaria-1" ></canvas>
+								<br/>
+							</div>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+												<hr>
+						<!-- Function add Video Youtube/Vimeo -->
+													<p class="custom-font-body"><center><h2>História</h2></center><div class=well><p>A história da cidade começou no período colonial, em 1553, quando o governador-geral Duarte da Costa mandou uma expedição verificar a existência de ouro na região. Deste ano até 1670, bandeirantes como Fernão Dias, Manoel de Borba Gato e Castelo Branco passaram pela região. O último, Manoel Pires Maciel Parente, derrotou a franca resistência dos índios caiapós e fundou o povoado de Brejo do Salgado, denominado assim por conta das águas salobras da região. O povoado progrediu, prosperou e começou a ser chamado de Porto do Salgado. Em 1833, Brejo do Salgado se tornou uma vila e, em homenagem à padroeira da região, recebeu o nome de Brejo do Amparo. No entanto, a sede do vilarejo foi transferida para Porto Salgado, que em homenagem à princesa Januária, filha de D. Pedro I, adotou o nome da Alteza. Em 7 de outubro de 1860, a localidade foi elevada à categoria de cidade. Há mais duas explicações para o nome da cidade. A primeira é sobre a escrava Januária, que teria fugido do cativeiro e se instalado na margem esquerda do rio São Francisco. A fugitiva fundou na localidade o primeiro comércio entre barqueiros do São Francisco e tropeiros do sertão. A segunda é que o nome Januária seria uma homenagem a Januário Cardoso de Almeida. Segundo os anais da cidade, o bandeirante teve uma atuação forte na região. A cultura do município tem influência portuguesa, negra e indígena, em que o artesanato ribeirinho com barro, madeira e fibras, os reisados, as festas juninas e as cavalhadas do Brejo do Amparo se destacam.</p><p>O turismo ambiental é bastante difundido na região. A APA Cavernas do Peruaçu abriga 150 cavernas, das quais 80 são catalogadas. Atualmente, é um dos maiores complexos arqueológicos do mundo, com mais de 10 mil anos de história. No local, há 95 sítios arqueológicos, onde se encontraram inscrições rupestres, utensílios conservados pelo tempo, estalactites, estalagmites e múmias com mais de mil anos de idade. A área da APA coincide com a área do Parque Estadual Veredas do Peruaçu.</p><p>Atividades como canoagem, cavalgadas, escalada, visita às grutas, motocross, mountain bike, rapel, trekking, tirolesa e passeios pelo rio São Francisco e suas praias de água doce são outras atrações procuradas pelos turistas.</p></div></p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+						<h4 class="custom-font-subtitle"><strong><center>Fotos</center></strong></h4>
+						<br/>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+													<img class="report-img" src="Januaria01.png"/>
+							<br/>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+													<img class="report-img" src="Januaria02.jpg"/>
+							<br/>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+						<h4 class="custom-font-subtitle"><strong><center>Localização</center></strong></h4>
+						<br/>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+													<p class="custom-font-body"><center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d492338.5206779254!2d-44.98333411157302!3d-15.40923439712372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x755e7568b04c947%3A0xba33d9bc5f08070e!2sJanu%C3%A1ria%2C%20MG%2C%2039480-000!5e0!3m2!1spt-BR!2sbr!4v1589514427623!5m2!1spt-BR!2sbr" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></center></p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+												<hr>
+						<!-- Function add Video Youtube/Vimeo -->
+													<p class="custom-font-body"><b>Fontes:</b> IBGE, Projeto Nexus, Wikipedia, Prefeitura Municipal de Januaria, Portal Ambiente Brasil e Google Maps</p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade modal-player" id="modal-report-MunicipiosPetrolina" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h2 class="modal-title custom-font-report-title" id="modal-report-label-MunicipiosPetrolina"> Petrolina (PE)</h2>
+						<p class="text-muted custom-font-body">Fontes: IBGE, Projeto Nexus, Wikipedia, Prefeitura Municipal de Petrolina e Google Maps</p>
+					</div>
+					<div class="modal-body" id="modal-report-text-MunicipiosPetrolina">
+													<img class="report-img" src="Bandeira_petrolina.png"/>
+							<br/>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+						<!-- Function addTable -->
+						<div>
+							<table class="table-bordered table table-hover table-responsive" id="data">
+								<tr>
+									<th colspan="100%" class="text-center"><h2>Características do território</h2></th>
+								</tr>
+								<tr>
+								</tr>
+										<tr>
+											<td><b>Área</b><sup>[2018]</sup><br>4.561,870 Km</td><td><b>População</b><sup>[2019]</sup><br>349.145 hab.</td><td><b>Densidade demográfica</b><br>64,44 hab/Km²</td><td><b>Escolarização</b><sup>6 a 14 anos</sup><br>97%</td>
+										</tr>
+										<tr>
+											<td><b>IDHM</b><sup>[2010]</sup><br>0,697</td><td><b>Ano de  instalação</b><br>1870</td><td><b>Microregião</b><br>Petrolina</td><td><b>Mesorregião</b><br>São Francisco Pernabucano</td>
+										</tr>
+							</table>
+						</div>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+						<!-- Function addGraphic -->
+							<table class="line table table-hover Petrolina-0 hidden" id="data">
+								<tr>
+									<th colspan="100%" class="text-center"><b>IDHM</b> Índice de Desenvolvimento Humano Municipal</th>
+								</tr>
+								<tr>
+									<th></th>
+										<th>1991</th>
+										<th>2000</th>
+										<th>2010</th>
+								</tr>
+										<tr>
+											<td>IDHM</td><td>0.471</td><td>0.58</td><td>0.697</td>
+										</tr>
+							</table>
+							<div style="width: 800px; height: 500px">
+								<br/>
+								<canvas class="chart" id="Petrolina-0" ></canvas>
+								<br/>
+							</div>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+						<!-- Function addGraphic -->
+							<table class=" table table-hover Petrolina-1 hidden" id="data">
+								<tr>
+									<th colspan="100%" class="text-center">Mortalidade Infantil - óbitos por mil nascidos vivo </th>
+								</tr>
+								<tr>
+									<th></th>
+										<th>2006</th>
+										<th>2007</th>
+										<th>2008</th>
+										<th>2009</th>
+										<th>2010</th>
+										<th>2011</th>
+										<th>2012</th>
+										<th>2013</th>
+										<th>2014</th>
+										<th>2015</th>
+										<th>2016</th>
+										<th>2017</th>
+								</tr>
+										<tr>
+											<td>Mortalidade</td><td>25.28</td><td>22.17</td><td>20.9</td><td>19.49</td><td>17.19</td><td>19.3</td><td>14.59</td><td>16.1</td><td>15.43</td><td>16.38</td><td>17.78</td><td>15.39</td>
+										</tr>
+							</table>
+							<div style="width: 800px; height: 500px">
+								<br/>
+								<canvas class="chart" id="Petrolina-1" ></canvas>
+								<br/>
+							</div>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+												<hr>
+						<!-- Function add Video Youtube/Vimeo -->
+													<p class="custom-font-body"><center><h2>História</h2></center><div class=well><p>São muitas as versões sobre a origem do nome da cidade. Uma delas diz que o nome da cidade teria sido uma homenagem ao então Imperador Dom Pedro I e sua esposa Dona Leopoldina. Em outra, menciona-se a existência de uma pedra linda que havia na margem do rio, pedreira da qual foi retirada matéria-prima para a construção de um dos maiores monumentos históricos da cidade, a Igreja Catedral. E, também, fala-se do escritor Santana Padilha que escreveu em seu livro Pedro e Lina que o nome da cidade se daria pelo fato de os dois primeiros moradores se chamarem Pedro e Lina e, na ocasião do seu casamento, o Frei Henrique, de sotaque italiano, ao pronunciar seus nomes fez-se ouvir Petrolina.</p><p>Chamada de "Passagem de Juazeiro", Petrolina era caminho para a vizinha cidade de Juazeiro, na margem oposta do rio São Francisco no Estado da Bahia. A passagem servia como ponto de apoio do desenvolvimento da zona sertaneja do Estado, com vias de acesso para Piauí, Ceará, Bahia, Minas Gerais, Rio de Janeiro e São Paulo.</p><p>A produção de vinhos no Vale do São Francisco é um dos pontos que impulsionam o desenvolvimento econômico e turístico da região. O incentivo à produtividade da uva e da fruticultura irrigada fez com que o município se tornasse o segundo polo vitivinicultor e um dos maiores exportadores de manga do Brasil. São produzidas em Petrolina cerca de 2,5 safras anualmente, fato que vem despertando o interesse de empresários internacionais. São empregadas técnicas avançadas de agricultura irrigada, utilizando-se as águas do rio São Francisco. Além do vinho, a região contempla atualmente a maior produção de frutas do país, sendo responsável por uma parcela de 30% das exportações brasileiras do setor. As condições de solo, insolação e umidade favorecem a produção de frutos de alta qualidade. A fruticultura irrigada tem proporcionado boas experiências aos agricultores de Petrolina e dos outros municípios que compõem a Região de Desenvolvimento do Sertão do São Francisco. É cada vez mais frequente o número de produtores que abrem mão da agricultura tradicional para investir em fruticultura irrigada na região que tem maior potencial de exportação.</p><p>A cidade tem uma orla urbana bem estruturada e uma tradição no artesanato, com a fabricação de carrancas. No Museu Ana das Carrancas podem ser encontrados trabalhos da própria artesã que empresta o nome à instituição, como de suas filhas e de outros artistas da região. No rio São Francisco, ilhas enfeitam a paisagem. A Ilha do Rodeadouro, de areias finas e douradas, possui diversas barracas, com música ao vivo nos finais de semana, e o tradicional peixe ribeirinho, o surubim, feito na brasa. O local é o ponto de encontro de petrolinenses e juazeirenses. Uma boa opção para quem quer relaxar, desfrutando da beleza natural de Petrolina, é o passeio fluvial. São barcas que realizam uma rota turística que vai desde o Cais, na Orla de Petrolina, passando pelas Ilhas do Massangano, Maroto, Pantanal, Rodeadouro, até a Ilha da Amélia. Os passeios, que duram cinco horas, proporcionam aos passageiros, música, lindas paisagens e paradas para mergulho. Outro ponto turístico bem movimentado é o Balneário das Pedrinhas, tradicional vila de pescadores da região, com seus restaurantes e o refrescante banho de rio. Em Petrolina, está localizado o maior complexo gastronômico ao ar livre da América Latina quando o assunto é carne de bode. No Bodódromo, como é conhecido o espaço, os turistas podem apreciar o principal prato típico da região: o bode assado.</p></div></p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+						<h4 class="custom-font-subtitle"><strong><center>Fotos</center></strong></h4>
+						<br/>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+													<img class="report-img" src="Petrolina01.jpg"/>
+							<br/>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+													<img class="report-img" src="Petrolina02.jpg"/>
+							<br/>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+						<h4 class="custom-font-subtitle"><strong><center>Localização</center></strong></h4>
+						<br/>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+													<p class="custom-font-body"><center><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d125951.21687869188!2d-40.6013875!3d-9.4235486!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x773704375177ee1%3A0x463421047bfe87cf!2sPrefeitura%20Municipal%20de%20Petrolina!5e0!3m2!1spt-BR!2sbr!4v1589514661982!5m2!1spt-BR!2sbr" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></center></p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+												<hr>
+						<!-- Function add Video Youtube/Vimeo -->
+													<p class="custom-font-body"><b>Fontes:</b> IBGE, Projeto Nexus, Wikipedia, Prefeitura Municipal de Petrolina e Google Maps</p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade modal-player" id="modal-report-MunicipiosRiachaodasNeves" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h2 class="modal-title custom-font-report-title" id="modal-report-label-MunicipiosRiachaodasNeves"> Riachao das Neves (BA)</h2>
+						<p class="text-muted custom-font-body">Fontes: IBGE, Projeto Nexus, Wikipedia, Prefeitura Municipal de Riachao das Neves e Google Maps</p>
+					</div>
+					<div class="modal-body" id="modal-report-text-MunicipiosRiachaodasNeves">
+													<img class="report-img" src="Bandeira_de_Riachao_das_Neves.png"/>
+							<br/>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+						<!-- Function addTable -->
+						<div>
+							<table class="table-bordered table table-hover table-responsive" id="data">
+								<tr>
+									<th colspan="100%" class="text-center"><h2>Características do território</h2></th>
+								</tr>
+								<tr>
+								</tr>
+										<tr>
+											<td><b>Área</b><sup>[2018]</sup><br>5.977,931 Km</td><td><b>População</b><sup>[2019]</sup><br>22.334 hab.</td><td><b>Densidade demográfica</b><br>3,87 hab/Km²</td><td><b>Escolarização</b><sup>6 a 14 anos</sup><br>95%</td>
+										</tr>
+										<tr>
+											<td><b>IDHM</b><sup>[2010]</sup><br>0,578</td><td><b>Ano de  instalação</b><br>1870</td><td><b>Microregião</b><br>Riachão das Neves</td>
+										</tr>
+							</table>
+						</div>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+						<!-- Function addGraphic -->
+							<table class="line table table-hover RiachaodasNeves-0 hidden" id="data">
+								<tr>
+									<th colspan="100%" class="text-center"><b>IDHM</b> Índice de Desenvolvimento Humano Municipal</th>
+								</tr>
+								<tr>
+									<th></th>
+										<th>1991</th>
+										<th>2000</th>
+										<th>2010</th>
+								</tr>
+										<tr>
+											<td>IDHM</td><td>0.267</td><td>0.389</td><td>0.578</td>
+										</tr>
+							</table>
+							<div style="width: 800px; height: 500px">
+								<br/>
+								<canvas class="chart" id="RiachaodasNeves-0" ></canvas>
+								<br/>
+							</div>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+						<!-- Function addGraphic -->
+							<table class=" table table-hover RiachaodasNeves-1 hidden" id="data">
+								<tr>
+									<th colspan="100%" class="text-center">Mortalidade Infantil - óbitos por mil nascidos vivo </th>
+								</tr>
+								<tr>
+									<th></th>
+										<th>2006</th>
+										<th>2007</th>
+										<th>2008</th>
+										<th>2009</th>
+										<th>2010</th>
+										<th>2011</th>
+										<th>2012</th>
+										<th>2013</th>
+										<th>2014</th>
+										<th>2015</th>
+										<th>2016</th>
+										<th>2017</th>
+										<th>2018</th>
+										<th>2019</th>
+								</tr>
+										<tr>
+											<td>Mortalidade</td><td>17.81</td><td>24.62</td><td>17.16</td><td>18.72</td><td>11.49</td><td>20.29</td><td>14.12</td><td>25.56</td><td>20.41</td><td>25.4</td><td>7.33</td><td>10.17</td><td>10.0</td><td>12.08</td>
+										</tr>
+							</table>
+							<div style="width: 800px; height: 500px">
+								<br/>
+								<canvas class="chart" id="RiachaodasNeves-1" ></canvas>
+								<br/>
+							</div>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+												<hr>
+						<!-- Function add Video Youtube/Vimeo -->
+													<p class="custom-font-body"><center><h2>História</h2></center><div class=well><p>No ano de 1660 o então 32º Governador Geral do Brasil Dom João de Lan-Castro, autorizou uma expedição para navegar os afluentes do Rio São Francisco, entre eles Rio Grande, Rio Preto e Rio Corrente. </p><p>Chegando mais precisamente no município da Barra a qual se tornou a primeira cidade da região no ano de 1.752, denominado vale do São Francisco o qual pertencia a Província de Pernambuco. A 2ª cidade da região foi Pilão Arcado em 1810 e logo após no ano de 1.820 a cidade de nossa origem, Campo Largo, hoje Cotegipe de onde Riachão das Neves foi desmembrado. </p><p>A região em 1824 passou a integrar a província de Minas Gerais e em 1827, por outro ato provisório foi entregue a Província da Bahia, tudo isso pelo motivo que os Pernambucanos, liderados por Frei Caneca, não aceitaram a Constituição imposta pelo Imperador, e para castigar Pernambuco o Imperador tirou toda esta área que hoje é conhecida como Oeste Baiano da Província de Pernambuco. A partir daí passou a integrar a Sesmaria da Casa da Ponte de Antonio Guedes de Brito. </p><p>Riachão das Neves no dia 26 de Julho de 1.934, foi elevado a Vila do município de Cotegipe, razão pela qual a padroeira do município é Senhora Sant`Ana. As chamas da emancipação política do município de Riachão ficarão claras em 1.954 quando o ilustre filho de Riachão o Sr. Nelson Carvalho da Cunha, se tornou prefeito em Cotegipe, vários ilustres filhos de Riachão foram vereadores pelo município de Cotegipe, alguns deles, Severiano Crisostomo, Joaquim Arruda, Armias Pereira de Matos, sem contar que antes teve outros tantos especiais entre estes, Joaquim Miguel dos Santos Bomfim, Aprígio Crisostomo Filho, Aylon Macedo, João Muniz de Souza, Salvador Gonçalves de Carvalho, José Antonio Borges, os quais foram decisivos para a emancipação política do município.</p></div></p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+						<h4 class="custom-font-subtitle"><strong><center>Fotos</center></strong></h4>
+						<br/>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+													<img class="report-img" src="riachao01.jpg"/>
+							<br/>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+													<img class="report-img" src="riachao02.jpg"/>
+							<br/>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+						<h4 class="custom-font-subtitle"><strong><center>Localização</center></strong></h4>
+						<br/>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+													<p class="custom-font-body"><center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31249.773348228995!2d-44.92707857924618!3d-11.749428366602416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7600497def7485d%3A0x5ec245c0e9f1f12d!2sRiach%C3%A3o%20das%20Neves%2C%20BA%2C%2047970-000!5e0!3m2!1spt-BR!2sbr!4v1626886927875!5m2!1spt-BR!2sbr" width="100%"  height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></center></p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+												<hr>
+						<!-- Function add Video Youtube/Vimeo -->
+													<p class="custom-font-body"><b>Fontes:</b> IBGE, Projeto Nexus, Wikipedia, Prefeitura Municipal de Riachao das Neves e Google Maps</p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade modal-player" id="modal-report-MunicipiosQueimadas" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h2 class="modal-title custom-font-report-title" id="modal-report-label-MunicipiosQueimadas"> Queimadas (PB)</h2>
+						<p class="text-muted custom-font-body">Fontes: IBGE, Projeto Nexus, Wikipedia, Prefeitura Municipal de Queimadas e Google Maps</p>
+					</div>
+					<div class="modal-body" id="modal-report-text-MunicipiosQueimadas">
+													<img class="report-img" src="Bandeira_queimadas.jpg"/>
+							<br/>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+						<!-- Function addTable -->
+						<div>
+							<table class="table-bordered table table-hover table-responsive" id="data">
+								<tr>
+									<th colspan="100%" class="text-center"><h2>Características do território</h2></th>
+								</tr>
+								<tr>
+								</tr>
+										<tr>
+											<td><b>Área</b><sup>[2018]</sup><br>402,923 Km</td><td><b>População</b><sup>[2019]</sup><br>43.967 hab.</td><td><b>Densidade demográfica</b><br>102,17 hab/Km²</td><td><b>Escolarização</b><sup>6 a 14 anos</sup><br>96,6%</td>
+										</tr>
+										<tr>
+											<td><b>IDHM</b><sup>[2010]</sup><br>0,608</td><td><b>Ano de  instalação</b><br>1870</td><td><b>Microregião</b><br>Campina Grande</td><td><b>Mesorregião</b><br>Agreste Paraibano</td>
+										</tr>
+							</table>
+						</div>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+						<!-- Function addGraphic -->
+							<table class="line table table-hover Queimadas-0 hidden" id="data">
+								<tr>
+									<th colspan="100%" class="text-center"><b>IDHM</b> Índice de Desenvolvimento Humano Municipal</th>
+								</tr>
+								<tr>
+									<th></th>
+										<th>1991</th>
+										<th>2000</th>
+										<th>2010</th>
+								</tr>
+										<tr>
+											<td>IDHM</td><td>0.297</td><td>0.431</td><td>0.608</td>
+										</tr>
+							</table>
+							<div style="width: 800px; height: 500px">
+								<br/>
+								<canvas class="chart" id="Queimadas-0" ></canvas>
+								<br/>
+							</div>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+						<!-- Function addGraphic -->
+							<table class="bar table table-hover Queimadas-1 hidden" id="data">
+								<tr>
+									<th colspan="100%" class="text-center">Mortalidade Infantil - óbitos por mil nascidos vivos</th>
+								</tr>
+								<tr>
+									<th></th>
+										<th>2006</th>
+										<th>2007</th>
+										<th>2008</th>
+										<th>2009</th>
+										<th>2010</th>
+										<th>2011</th>
+										<th>2012</th>
+										<th>2013</th>
+										<th>2014</th>
+										<th>2015</th>
+										<th>2016</th>
+										<th>2017</th>
+								</tr>
+										<tr>
+											<td>Mortalidade</td><td>8.79</td><td>20.58</td><td>20.55</td><td>15.23</td><td>21.21</td><td>10.69</td><td>16.37</td><td>12.68</td><td>14.37</td><td>10.91</td><td>6.75</td><td>25.3</td>
+										</tr>
+							</table>
+							<div style="width: 800px; height: 500px">
+								<br/>
+								<canvas class="chart" id="Queimadas-1" ></canvas>
+								<br/>
+							</div>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+												<hr>
+						<!-- Function add Video Youtube/Vimeo -->
+													<p class="custom-font-body"><center><h2>História</h2></center><div class=well><p>Localizada no Agreste paraibano, a 133 km de João Pessoa, a cidade de Queimadas fica em uma região que tem em sua história as marcas da chegada do gado ao interior da Paraíba, no século XVIII. A data de terra onde hoje está localizada a cidade foi concedida a Pascácio de Oliveira Ledo em 13 de dezembro de 1712, como recompensa às suas atividades de conquista dos sertões (para interiorização do gado), e às guerras que praticou contra o “gentio bravo” em favor da coroa portuguesa.</p><p>O povoamento de Queimadas iniciou-se por volta do ano de 1889, quando chegaram à região as primeiras famílias: Maia, Muniz, Tavares, Gomes, Rêgo e Teixeira; foi distrito de Campina Grande até 14 de dezembro de 1961, quando foi emancipada politicamente.</p><p>A cidade possui um rico patrimônio cultural que vai desde significativa parcela da Serra de Bodopitá, com diversos espécimes vegetais e sítios arqueológicos pré-históricos, às edificações antigas que compõem o desenho urbano da cidade. Dessas edificações que remontam ao final do século XIX e início do século XX, em estilo eclético e art déco, destacamos: Colégio Maria Dulce Barbosa; Cada de Yayá de Melo (conhecida como casa de Dr. Argeu, onde morou a primeira professora de Campina Grande e que, acredita-se, teria sido também a primeira professora de Queimadas); o Casarão Amarelo, onde funcionou a primeira Prefeitura; a Igreja Católica; o prédio da Socal, uma usina de beneficiamento de algodão construída em 1935 (hoje extinta); e o Colégio José Tavares.</p><p>Entre as manifestações culturais da cidade, destaca-se o coco-de-roda, tradição com mais de duzentos anos, originária da cidade de São Vicente (PE). Suas características foram herdadas das culturas indígena e africana, amplamente praticadas nas zonas rurais do município. Por ser um ponto de passagem para o Sertão, Queimadas recebe grande número de pessoas de outras cidades. Além disso, tem potencialidade turística própria, seja no turismo de eventos de festas tradicionais (a exemplo da Festa de Reis), seja no turismo de aventura, que é praticado no Complexo da Pedra do Touro, onde é possível fazer trilhas, práticas de rapel, acesso à gastronomia local e ainda visitar 12 sítios arqueológicos.</p></div></p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+						<h4 class="custom-font-subtitle"><strong><center>Fotos</center></strong></h4>
+						<br/>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+													<img class="report-img" src="Queimadas01.jpg"/>
+							<br/>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+													<img class="report-img" src="Queimadas02.jpg"/>
+							<br/>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+						<h4 class="custom-font-subtitle"><strong><center>Localização</center></strong></h4>
+						<br/>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+													<p class="custom-font-body"><center><iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d253222.88498570764!2d-36.06096259461517!3d-7.397791283238519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smunicipio%20de%20Queimadas!5e0!3m2!1spt-BR!2sbr!4v1589566316476!5m2!1spt-BR!2sbr" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></center></p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+												<hr>
+						<!-- Function add Video Youtube/Vimeo -->
+													<p class="custom-font-body"><b>Fontes:</b> IBGE, Projeto Nexus, Wikipedia, Prefeitura Municipal de Queimadas e Google Maps</p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade modal-player" id="modal-report-BaciasParnaíba" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h2 class="modal-title custom-font-report-title" id="modal-report-label-BaciasParnaíba"> Parnaíba</h2>
+						<p class="text-muted custom-font-body">Fonte: Wikipidia</p>
+					</div>
+					<div class="modal-body" id="modal-report-text-BaciasParnaíba">
+													<p class="custom-font-body"><center><h2>Topônimo</h2></center><div class=well>Seu nome indígena é Opará ou Pirapitinga[3] e também é carinhosamente chamado Velho Chico.A alcunha <b>«Rio da Integração Nacional»</b> se deve às entradas e bandeiras que nos séculos XVII e XVIII usaram-no como rota para penetrar no interior. Outro nome, <b>«rio dos Currais»</b>, se deve a ter servido de trilha para fazer descer o gado do Nordeste até a região das Minas Gerais, sobretudo no início do século XVIII, quando se achava ali o ouro que fez afluir milhões de pessoas à terra, fazendo a fortuna de muita gente e, afinal, integrando a região Nordeste às regiões Centro-Oeste e Sudeste.<sup>[carece de fontes]</sup></div></p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+						<h4 class="custom-font-subtitle"><strong><center><h2>História</h2></center></strong></h4>
+						<br/>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+													<p class="custom-font-body"><b>Povos originais e colonização:</b><br>Tradicionalmente, a <b>etnia xacriabá</b> ocupa boa parte da extensão do rio São Francisco.<p>Como escreveu Guimarães Rosa, sua história tem sido a história do sofrimento de um rio que há mais de quinhentos anos é fonte de vida e riqueza. Seu descobrimento é atribuído ao navegador florentino Américo Vespúcio, que navegou em sua foz em 1501. A 4 de outubro desse mesmo ano, uma expedição de reconhecimento descia a costa brasileira, rente ao litoral, comandada por André Gonçalves e Américo Vespúcio e vinda do cabo de São Roque. O nome é homenagem a São Francisco de Assis, festejado naquela data. A região da foz era habitada pelos índios, que a chamavam Opará, que significa algo como “rio-mar”. Outra expedição, em 1503, chegou à foz, comandada por Gonçalo Coelho, outra vez com Américo Vespúcio. O rio era visitado apenas nas cercanias da foz, pois a mata, a caatinga desconhecida e as tribos ferozes impediam os brancos de penetrar na terra.<sup>[carece de fontes]</sup></p></p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade modal-player" id="modal-report-BaciasSãoFrancisco" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h2 class="modal-title custom-font-report-title" id="modal-report-label-BaciasSãoFrancisco"> São Francisco</h2>
+						<p class="text-muted custom-font-body">Fonte: Wikipidia</p>
+					</div>
+					<div class="modal-body" id="modal-report-text-BaciasSãoFrancisco">
+													<p class="custom-font-body"><center><h2>Topônimo</h2></center><div class=well>Seu nome indígena é Opará ou Pirapitinga[3] e também é carinhosamente chamado Velho Chico.A alcunha <b>«Rio da Integração Nacional»</b> se deve às entradas e bandeiras que nos séculos XVII e XVIII usaram-no como rota para penetrar no interior. Outro nome, <b>«rio dos Currais»</b>, se deve a ter servido de trilha para fazer descer o gado do Nordeste até a região das Minas Gerais, sobretudo no início do século XVIII, quando se achava ali o ouro que fez afluir milhões de pessoas à terra, fazendo a fortuna de muita gente e, afinal, integrando a região Nordeste às regiões Centro-Oeste e Sudeste.<sup>[carece de fontes]</sup></div></p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+						<h4 class="custom-font-subtitle"><strong><center><h2>História</h2></center></strong></h4>
+						<br/>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+													<p class="custom-font-body"><b>Povos originais e colonização:</b><br>Tradicionalmente, a <b>etnia xacriabá</b> ocupa boa parte da extensão do rio São Francisco.<p>Como escreveu Guimarães Rosa, sua história tem sido a história do sofrimento de um rio que há mais de quinhentos anos é fonte de vida e riqueza. Seu descobrimento é atribuído ao navegador florentino Américo Vespúcio, que navegou em sua foz em 1501. A 4 de outubro desse mesmo ano, uma expedição de reconhecimento descia a costa brasileira, rente ao litoral, comandada por André Gonçalves e Américo Vespúcio e vinda do cabo de São Roque. O nome é homenagem a São Francisco de Assis, festejado naquela data. A região da foz era habitada pelos índios, que a chamavam Opará, que significa algo como “rio-mar”. Outra expedição, em 1503, chegou à foz, comandada por Gonçalo Coelho, outra vez com Américo Vespúcio. O rio era visitado apenas nas cercanias da foz, pois a mata, a caatinga desconhecida e as tribos ferozes impediam os brancos de penetrar na terra.<sup>[carece de fontes]</sup></p></p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade modal-player" id="modal-report-BiomasCaatinga" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h2 class="modal-title custom-font-report-title" id="modal-report-label-BiomasCaatinga"> Caatinga</h2>
+						<p class="text-muted custom-font-body">Fonte: MMA</p>
+					</div>
+					<div class="modal-body" id="modal-report-text-BiomasCaatinga">
+						<h4 class="custom-font-subtitle"><strong><h2>Conheça o Bioma</h2></strong></h4>
+						<br/>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+													<p class="custom-font-body">A caatinga ocupa uma área de cerca de 844.453 quilômetros quadrados, o equivalente a 11% do território nacional. Engloba os estados Alagoas, Bahia, Ceará, Maranhão, Pernambuco, Paraíba, Rio Grande do Norte, Piauí, Sergipe e o norte de Minas Gerais. Rico em biodiversidade, o bioma abriga 178 espécies de mamíferos, 591 de aves, 177 de répteis, 79 espécies de anfíbios, 241 de peixes e 221 abelhas. Cerca de 27 milhões de pessoas vivem na região, a maioria carente e dependente dos recursos do bioma para sobreviver. A caatinga tem um imenso potencial para a conservação de serviços ambientais, uso sustentável e bioprospecção que, se bem explorado, será decisivo para o desenvolvimento da região e do país. A biodiversidade da caatinga ampara diversas atividades econômicas voltadas para fins agrosilvopastoris e industriais, especialmente nos ramos farmacêutico, de cosméticos, químico e de alimentos.</p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+													<p class="custom-font-body">Apesar da sua importância, o bioma tem sido desmatado de forma acelerada, principalmente nos últimos anos, devido principalmente ao consumo de lenha nativa, explorada de forma ilegal e insustentável, para fins domésticos e indústrias, ao sobrepastoreio e a conversão para pastagens e agricultura. Frente ao avançado desmatamento que chega a 46% da área do bioma, segundo dados do Ministério do Meio Ambiente (MMA), o governo busca concretizar uma agenda de criação de mais unidades de conservação federais e estaduais no bioma, além de promover alternativas para o uso sustentável da sua biodiversidade.</p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+												<hr>
+						<!-- Function add Video Youtube/Vimeo -->
+						<h4 class="custom-font-subtitle"><strong><center><h2>Conheça as Belezas da Caatinga</h2></center></strong></h4>
+						<br/>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+													<p class="custom-font-body"><center><iframe width="560" height="315" src="https://www.youtube.com/embed/_O4TXbfYPng" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center></p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+												<hr>
+						<!-- Function add Video Youtube/Vimeo -->
+													<p class="custom-font-body">Em relação às Unidades de Conservação (UC´s) federais, em 2009 foi criado o Monumento Natural do Rio São Francisco, com 27 mil hectares, que engloba os estados de Alagoas, Bahia e Sergipe e, em 2010, o Parque Nacional das Confusões, no Piauí foi ampliado em 300 mil hectares, passando a ter 823.435,7 hectares. Em 2012 foi criado o Parque Nacional da Furna Feia, nos Municípios de Baraúna e Mossoró, no estado do Rio Grande do Norte, com 8.494 ha. Com estas novas unidades, a área protegida por unidades de conservação no bioma aumentou para cerca de 7,5%. Ainda assim, o bioma continuará como um dos menos protegidos do país, já que pouco mais de 1% destas unidades são de Proteção Integral. Ademais, grande parte das unidades de conservação do bioma, especialmente as Áreas de Proteção Ambiental – APAs, têm baixo nível de implementação.</p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade modal-player" id="modal-report-BiomasCerrado" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h2 class="modal-title custom-font-report-title" id="modal-report-label-BiomasCerrado"> Cerrado</h2>
+						<p class="text-muted custom-font-body">Fonte: MMA</p>
+					</div>
+					<div class="modal-body" id="modal-report-text-BiomasCerrado">
+						<h4 class="custom-font-subtitle"><strong><h2>Conheça o Bioma</h2></strong></h4>
+						<br/>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+													<p class="custom-font-body">O Cerrado é o segundo maior bioma da América do Sul, ocupando uma área de 2.036.448 km2, cerca de 22% do território nacional. A sua área contínua incide sobre os estados de Goiás, Tocantins, Mato Grosso, Mato Grosso do Sul, Minas Gerais, Bahia, Maranhão, Piauí, Rondônia, Paraná, São Paulo e Distrito Federal, além dos encraves no Amapá, Roraima e Amazonas. Neste espaço territorial encontram-se as nascentes das três maiores bacias hidrográficas da América do Sul (Amazônica/Tocantins, São Francisco e Prata), o que resulta em um elevado potencial aquífero e favorece a sua biodiversidade.</p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+												<hr>
+						<!-- Function add Video Youtube/Vimeo -->
+						<h4 class="custom-font-subtitle"><strong><center><h2>Conheça as Belezas do Cerrado</h2></center></strong></h4>
+						<br/>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+													<p class="custom-font-body"><center><iframe width="560" height="315" src="https://www.youtube.com/embed/q0_XODQ0GGg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center></p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+												<hr>
+						<!-- Function add Video Youtube/Vimeo -->
+													<p class="custom-font-body">Considerado como um hotspots mundiais de biodiversidade, o Cerrado apresenta extrema abundância de espécies endêmicas e sofre uma excepcional perda de habitat. Do ponto de vista da diversidade biológica, o Cerrado brasileiro é reconhecido como a savana mais rica do mundo, abrigando 11.627 espécies de plantas nativas já catalogadas. Existe uma grande diversidade de habitats, que determinam uma notável alternância de espécies entre diferentes fitofisionomias. Cerca de 199 espécies de mamíferos são conhecidas, e a rica avifauna compreende cerca de 837 espécies. Os números de peixes (1200 espécies), répteis (180 espécies) e anfíbios (150 espécies) são elevados. O número de peixes endêmicos não é conhecido, porém os valores são bastante altos para anfíbios e répteis: 28% e 17%, respectivamente. De acordo com estimativas recentes, o Cerrado é o refúgio de 13% das borboletas, 35% das abelhas e 23% dos cupins dos trópicos.</p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="modal-completed-description" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title custom-font-subtitle" id="modal-title-description"></h4>
+					</div>
+					<div class="modal-body">
+						<p class="custom-font-body" id="info-description"></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-info" data-dismiss="modal">Ok</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="./jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key="></script>
+		
+		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		
+		<script type="text/javascript" src="./config.js"></script>
+		<script type="text/javascript" src="./publish.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+		<script type="text/javascript" src="./graphic.js"></script>
+		<script type="text/javascript" src="./player.js"></script>
+
+	</body>
+</html>
+
