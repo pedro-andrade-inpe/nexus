@@ -2,7 +2,7 @@
 import("gis")
 
 project = Project{
-	title = "Campina Grande",
+	title = "Região de Queimadas",
 	author = "NEXUS",
 	file = "campina-g.tview",
 	clean = true,
