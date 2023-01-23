@@ -6,7 +6,7 @@ local description = [[
 
 Application{
     key = "AIzaSyA1coAth-Bo7m99rnxOm2oOBB88AmaSbOk",
-    project = "campina-g.tview",
+    project = "queimadas.tview",
     description = description,
 	base = "roadmap",
     zoom = 10.3,
