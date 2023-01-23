@@ -38,7 +38,7 @@ Application{
 			if cell.fid == 52 then
 				text = "<b/>"..cell.Ponto.."."	
 			else
-				text = "Ponto: <b>"..cell.Ponto.."</b><br><br>Tipo de solo: <b>"..cell.Tipo_solo.."</b>, <br>Coleta do solo: <b>"..cell.Coleta_Sol.."</b>,<br>Degradado: <b>"..cell.Degradado.."</b>."
+				text = "Ponto: <b>"..cell.Ponto.."</b><br><br>Tipo de solo: <b>"..cell.Tipo_solo.."</b><br>Coleta do solo: <b>"..cell.Coleta_Sol.."</b><br>Degradado: <b>"..cell.Degradado.."</b>"
 			end
 						
 		
