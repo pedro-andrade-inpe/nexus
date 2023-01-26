@@ -38,16 +38,16 @@ Application{
 			if cell.Ponto == 1 then
 				text = "Projeto Nexus - <b>Voo 01 Veredas e Pântano Galeria Florestas</b><br/>"	
 				mreport:addVideo{
-			   width = 500,
+			   width = 560,
 			   heigh = 315,
-			   url = "https://www.youtube.com/watch?v=oTVE3Fw6xaY",
+			   url = "https://www.youtube.com/embed/oTVE3Fw6xaY",
 			}
 			else
 				text = "Projeto Nexus - <b>Voo 02 Floresta Tropical Arbórea Sazonalmente Seca</b><br/>"
 				mreport:addVideo{
-			   width = 500,
+			   width = 560,
 			   heigh = 315,
-			   url = "https://www.youtube.com/watch?v=143IxB0-roU",
+			   url = "https://www.youtube.com/embed/143IxB0-roU",
 			}
 			end
 						
