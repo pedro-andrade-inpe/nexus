@@ -18,14 +18,14 @@ Application{
 		width = 2,
 		border = "blue",
 		icon = {
-			time = 100
+			time = 60
 		}
 	},
 	
 	points = View{
-		description = "Pontos sobrevoados por drones",
+		description = "Pontos sobrevoados por drone",
 		select = "Ponto",
-		icon = "forest",
+		icon = "flag",
 		label = "ponto sobrevoado",
 
 		report = function(cell)
