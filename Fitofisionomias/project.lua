@@ -2,7 +2,7 @@
 import("gis")
 
 Project{
-	title = "Região fitofisionomias",
+	title = "Fitofisionomias",
   file = "fitofisionomias.tview", 
 	author = "NEXUS",
 	clean = true,

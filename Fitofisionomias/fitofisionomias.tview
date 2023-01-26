@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <Project version="5.5.1" xmlns="http://www.terralib.org/schemas/qt/af" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se" xmlns:te_da="http://www.terralib.org/schemas/dataaccess" xmlns:te_map="http://www.terralib.org/schemas/maptools" xmlns:te_qt_af="http://www.terralib.org/schemas/common/af" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:schemaLocation="http://www.terralib.org/schemas/qt/af /home/flameuss/Downloads/terrame/bin/share/terralib/schemas/terralib/qt/af/project.xsd">
 
-  <Title>Região fitofisionomias</Title>
+  <Title>Fitofisionomias</Title>
 
   <Author>NEXUS</Author>
 
   <te_da:DataSourceList xmlns:te_common="http://www.terralib.org/schemas/common">
-    <te_da:DataSource access_driver="OGR" id="3d15fd53-6c48-4c3b-ad17-e17cbbd21d33" type="OGR">
+    <te_da:DataSource access_driver="OGR" id="2196fe50-22c2-4969-85a4-b9245f2beb98" type="OGR">
       <te_da:Title>points</te_da:Title>
       <te_da:Description>Created on TerraME</te_da:Description>
-      <te_da:URI>file%3A%2F%2F%2Fopt%2Flampp%2Fhtdocs%2Ffitofisionomias%2Fponto.shp</te_da:URI>
+      <te_da:URI>file%3A%2F%2F%2Fopt%2Flampp%2Fhtdocs%2Fnexus%2FFitofisionomias%2Fponto.shp</te_da:URI>
     </te_da:DataSource>
-    <te_da:DataSource access_driver="OGR" id="dd1a8a80-b87e-44bc-9477-c3a8f545e526" type="OGR">
+    <te_da:DataSource access_driver="OGR" id="f43d7e50-0bcd-4c32-9626-fdae5008500b" type="OGR">
       <te_da:Title>trajectory</te_da:Title>
       <te_da:Description>Created on TerraME</te_da:Description>
-      <te_da:URI>file%3A%2F%2F%2Fopt%2Flampp%2Fhtdocs%2Ffitofisionomias%2Fmerged.shp</te_da:URI>
+      <te_da:URI>file%3A%2F%2F%2Fopt%2Flampp%2Fhtdocs%2Fnexus%2FFitofisionomias%2Fmerged.shp</te_da:URI>
     </te_da:DataSource>
   </te_da:DataSourceList>
 
   <ComponentList/>
 
   <te_map:LayerList>
-    <te_map:DataSetLayer id="00ee8e4b-7171-4054-a219-f3c80eaedd8e">
+    <te_map:DataSetLayer id="8551bb61-496e-4101-9858-6ccdcea0f4ea">
       <te_map:Title>points</te_map:Title>
       <te_map:Visible>NOT_VISIBLE</te_map:Visible>
       <te_map:Encoding>ISO-8859-1</te_map:Encoding>
       <te_map:DataSetName>ponto</te_map:DataSetName>
-      <te_map:DataSourceId>3d15fd53-6c48-4c3b-ad17-e17cbbd21d33</te_map:DataSourceId>
+      <te_map:DataSourceId>2196fe50-22c2-4969-85a4-b9245f2beb98</te_map:DataSourceId>
       <te_map:SRSInfo>
         <te_map:SRID>4674</te_map:SRID>
         <te_map:Proj4>+proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs</te_map:Proj4>
@@ -131,12 +131,12 @@
         </se:FeatureTypeStyle>
       </te_map:SelectionStyle>
     </te_map:DataSetLayer>
-    <te_map:DataSetLayer id="8038998c-3860-4355-901e-c3d1c811b62a">
+    <te_map:DataSetLayer id="24092a75-f90e-4679-97b6-690c3a92aea6">
       <te_map:Title>trajectory</te_map:Title>
       <te_map:Visible>NOT_VISIBLE</te_map:Visible>
       <te_map:Encoding>ISO-8859-1</te_map:Encoding>
       <te_map:DataSetName>merged</te_map:DataSetName>
-      <te_map:DataSourceId>dd1a8a80-b87e-44bc-9477-c3a8f545e526</te_map:DataSourceId>
+      <te_map:DataSourceId>f43d7e50-0bcd-4c32-9626-fdae5008500b</te_map:DataSourceId>
       <te_map:SRSInfo>
         <te_map:SRID>4326</te_map:SRID>
         <te_map:Proj4>+proj=longlat +datum=WGS84 +no_defs</te_map:Proj4>

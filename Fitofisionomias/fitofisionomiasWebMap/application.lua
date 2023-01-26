@@ -1,7 +1,8 @@
 import("publish")
 
 local description = [[
-	fitofisionomias
+	Trabalho de campo do projeto Nexus feito pelo Museu Nacional.<br>
+		Tanto esta aplicação quanto o trabalho de campo foram realizados no contexto do projeto <b>Nexus</b>, fomentado pela <b>FAPESP</b>
 ]]
 
 Application{
