@@ -1,7 +1,7 @@
 import("publish")
 
 local description = [[
-	Trabalho de campo do projeto Nexus feito pelo Museu Nacional.<br>
+	Trabalho de campo do projeto <b>Nexus</b> feito pelo <b>Museu Nacional</b>.<br>
 	Tanto esta aplicação quanto o trabalho de campo foram realizados no contexto do projeto <b>Nexus</b>, fomentado pela <b>FAPESP</b>, processo <b>#2017/22269-2</b>
 ]]
 
