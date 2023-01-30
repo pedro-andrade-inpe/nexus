@@ -6,4 +6,4 @@ To run the Petrolina click [here](https://pedro-andrade-inpe.github.io/nexus/Pet
 
 To run the Queimadas click [here](https://pedro-andrade-inpe.github.io/nexus/Queimadas/queimadasWebMap/index.html).
 
-To run the Fitofisionomias click [here](https://flameuss.github.io/nexus/Fitofisionomias/fitofisionomiasWebMap/index.html).
+To run the Fitofisionomias click [here](https://pedro-andrade-inpe.github.io/nexus/Fitofisionomias/fitofisionomiasWebMap/index.html).
