@@ -43,8 +43,8 @@ Application{
 						
 		
 		-- mreport:addText(text)
-		mreport:addImage("photos/"..cell.img01..".jpg")
-    mreport:addImage("photos/"..cell.img02..".jpg")
+		mreport:addImage("photos/"..cell.img01..".png")
+    mreport:addImage("photos/"..cell.img02..".png")
 
 			return mreport
 		end
