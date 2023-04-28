@@ -6,7 +6,7 @@ Project{
   file = "fitofisionomias.tview", 
 	author = "NEXUS",
 	clean = true,
-	trajectory = "merged.shp",
+	trajectory = "merged02.shp",
 	points = "ponto.shp",
 }
 
