@@ -6,27 +6,111 @@
   <Author>NEXUS</Author>
 
   <te_da:DataSourceList xmlns:te_common="http://www.terralib.org/schemas/common">
-    <te_da:DataSource access_driver="OGR" id="93be65cd-433c-4aef-b0ed-13dbb2eded29" type="OGR">
-      <te_da:Title>trajectory</te_da:Title>
-      <te_da:Description>Created on TerraME</te_da:Description>
-      <te_da:URI>file%3A%2F%2F%2Fopt%2Flampp%2Fhtdocs%2Fnexus%2FFitofisionomias%2Fmerged02.shp</te_da:URI>
-    </te_da:DataSource>
-    <te_da:DataSource access_driver="OGR" id="f2b96c7b-afad-4c4f-ab09-e76acb50a8e2" type="OGR">
+    <te_da:DataSource access_driver="OGR" id="54706375-3eb3-4c72-aacb-a565cb25fdf2" type="OGR">
       <te_da:Title>points</te_da:Title>
       <te_da:Description>Created on TerraME</te_da:Description>
       <te_da:URI>file%3A%2F%2F%2Fopt%2Flampp%2Fhtdocs%2Fnexus%2FFitofisionomias%2Fponto.shp</te_da:URI>
+    </te_da:DataSource>
+    <te_da:DataSource access_driver="OGR" id="8140819a-b314-49f3-9e4b-cc47765e7662" type="OGR">
+      <te_da:Title>trajectory</te_da:Title>
+      <te_da:Description>Created on TerraME</te_da:Description>
+      <te_da:URI>file%3A%2F%2F%2Fopt%2Flampp%2Fhtdocs%2Fnexus%2FFitofisionomias%2Fmerged02.shp</te_da:URI>
     </te_da:DataSource>
   </te_da:DataSourceList>
 
   <ComponentList/>
 
   <te_map:LayerList>
-    <te_map:DataSetLayer id="c6a4e29d-b870-4b9b-88f4-62f982aa3fcf">
+    <te_map:DataSetLayer id="4c505ac6-7ca0-4ccc-b56b-ebd314c1201b">
+      <te_map:Title>trajectory</te_map:Title>
+      <te_map:Visible>NOT_VISIBLE</te_map:Visible>
+      <te_map:Encoding>ISO-8859-1</te_map:Encoding>
+      <te_map:DataSetName>merged02</te_map:DataSetName>
+      <te_map:DataSourceId>8140819a-b314-49f3-9e4b-cc47765e7662</te_map:DataSourceId>
+      <te_map:SRSInfo>
+        <te_map:SRID>4674</te_map:SRID>
+        <te_map:Proj4>+proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs</te_map:Proj4>
+      </te_map:SRSInfo>
+      <te_map:Extent llx="-57.600309016458603" lly="-25.640932380531169" urx="-38.295674484535382" ury="-3.1569351477252892"/>
+      <te_map:RendererId>ABSTRACT_LAYER_RENDERER</te_map:RendererId>
+      <te_map:CompositionMode>0</te_map:CompositionMode>
+      <te_map:Style>
+        <se:FeatureTypeStyle version="1.1.0">
+          <se:Name>Visualization Style</se:Name>
+          <se:Rule>
+            <se:LineSymbolizer version="1.1.0">
+              <se:Stroke>
+                <se:SvgParameter name="stroke">
+                  <ogc:Literal>#FF0000</ogc:Literal>
+                </se:SvgParameter>
+                <se:SvgParameter name="stroke-opacity">
+                  <ogc:Literal>1.0</ogc:Literal>
+                </se:SvgParameter>
+                <se:SvgParameter name="stroke-width">
+                  <ogc:Literal>1</ogc:Literal>
+                </se:SvgParameter>
+                <se:SvgParameter name="stroke-linejoin">
+                  <ogc:Literal>mitre</ogc:Literal>
+                </se:SvgParameter>
+                <se:SvgParameter name="stroke-linecap">
+                  <ogc:Literal>butt</ogc:Literal>
+                </se:SvgParameter>
+                <se:SvgParameter name="stroke-dasharray">
+                  <ogc:Literal>1 0</ogc:Literal>
+                </se:SvgParameter>
+                <se:SvgParameter name="stroke-dashoffset">
+                  <ogc:Literal>0.0</ogc:Literal>
+                </se:SvgParameter>
+              </se:Stroke>
+              <se:PerpendicularOffset>
+                <ogc:Literal>0.0</ogc:Literal>
+              </se:PerpendicularOffset>
+            </se:LineSymbolizer>
+          </se:Rule>
+        </se:FeatureTypeStyle>
+      </te_map:Style>
+      <te_map:SelectionStyle>
+        <se:FeatureTypeStyle version="1.1.0">
+          <se:Name>Selection Style</se:Name>
+          <se:Rule>
+            <se:LineSymbolizer version="1.1.0">
+              <se:Stroke>
+                <se:SvgParameter name="stroke">
+                  <ogc:Literal>#00FF00</ogc:Literal>
+                </se:SvgParameter>
+                <se:SvgParameter name="stroke-opacity">
+                  <ogc:Literal>1.0</ogc:Literal>
+                </se:SvgParameter>
+                <se:SvgParameter name="stroke-width">
+                  <ogc:Literal>1</ogc:Literal>
+                </se:SvgParameter>
+                <se:SvgParameter name="stroke-linejoin">
+                  <ogc:Literal>mitre</ogc:Literal>
+                </se:SvgParameter>
+                <se:SvgParameter name="stroke-linecap">
+                  <ogc:Literal>butt</ogc:Literal>
+                </se:SvgParameter>
+                <se:SvgParameter name="stroke-dasharray">
+                  <ogc:Literal>1 0</ogc:Literal>
+                </se:SvgParameter>
+                <se:SvgParameter name="stroke-dashoffset">
+                  <ogc:Literal>0.0</ogc:Literal>
+                </se:SvgParameter>
+              </se:Stroke>
+              <se:PerpendicularOffset>
+                <ogc:Literal>0.0</ogc:Literal>
+              </se:PerpendicularOffset>
+            </se:LineSymbolizer>
+          </se:Rule>
+        </se:FeatureTypeStyle>
+      </te_map:SelectionStyle>
+    </te_map:DataSetLayer>
+    <te_map:DataSetLayer id="ed24a81c-4eed-4ac0-9a9d-9e82f5c69912">
       <te_map:Title>points</te_map:Title>
       <te_map:Visible>NOT_VISIBLE</te_map:Visible>
       <te_map:Encoding>ISO-8859-1</te_map:Encoding>
       <te_map:DataSetName>ponto</te_map:DataSetName>
-      <te_map:DataSourceId>f2b96c7b-afad-4c4f-ab09-e76acb50a8e2</te_map:DataSourceId>
+      <te_map:DataSourceId>54706375-3eb3-4c72-aacb-a565cb25fdf2</te_map:DataSourceId>
       <te_map:SRSInfo>
         <te_map:SRID>4674</te_map:SRID>
         <te_map:Proj4>+proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs</te_map:Proj4>
@@ -127,90 +211,6 @@
                 <se:Rotation>0</se:Rotation>
               </se:Graphic>
             </se:PointSymbolizer>
-          </se:Rule>
-        </se:FeatureTypeStyle>
-      </te_map:SelectionStyle>
-    </te_map:DataSetLayer>
-    <te_map:DataSetLayer id="38a29925-0488-445f-8459-b3792a4cc951">
-      <te_map:Title>trajectory</te_map:Title>
-      <te_map:Visible>NOT_VISIBLE</te_map:Visible>
-      <te_map:Encoding>ISO-8859-1</te_map:Encoding>
-      <te_map:DataSetName>merged02</te_map:DataSetName>
-      <te_map:DataSourceId>93be65cd-433c-4aef-b0ed-13dbb2eded29</te_map:DataSourceId>
-      <te_map:SRSInfo>
-        <te_map:SRID>4674</te_map:SRID>
-        <te_map:Proj4>+proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs</te_map:Proj4>
-      </te_map:SRSInfo>
-      <te_map:Extent llx="-57.600309016458603" lly="-25.640932380531169" urx="-38.295674484535382" ury="-3.1569351477252892"/>
-      <te_map:RendererId>ABSTRACT_LAYER_RENDERER</te_map:RendererId>
-      <te_map:CompositionMode>0</te_map:CompositionMode>
-      <te_map:Style>
-        <se:FeatureTypeStyle version="1.1.0">
-          <se:Name>Visualization Style</se:Name>
-          <se:Rule>
-            <se:LineSymbolizer version="1.1.0">
-              <se:Stroke>
-                <se:SvgParameter name="stroke">
-                  <ogc:Literal>#FF0000</ogc:Literal>
-                </se:SvgParameter>
-                <se:SvgParameter name="stroke-opacity">
-                  <ogc:Literal>1.0</ogc:Literal>
-                </se:SvgParameter>
-                <se:SvgParameter name="stroke-width">
-                  <ogc:Literal>1</ogc:Literal>
-                </se:SvgParameter>
-                <se:SvgParameter name="stroke-linejoin">
-                  <ogc:Literal>mitre</ogc:Literal>
-                </se:SvgParameter>
-                <se:SvgParameter name="stroke-linecap">
-                  <ogc:Literal>butt</ogc:Literal>
-                </se:SvgParameter>
-                <se:SvgParameter name="stroke-dasharray">
-                  <ogc:Literal>1 0</ogc:Literal>
-                </se:SvgParameter>
-                <se:SvgParameter name="stroke-dashoffset">
-                  <ogc:Literal>0.0</ogc:Literal>
-                </se:SvgParameter>
-              </se:Stroke>
-              <se:PerpendicularOffset>
-                <ogc:Literal>0.0</ogc:Literal>
-              </se:PerpendicularOffset>
-            </se:LineSymbolizer>
-          </se:Rule>
-        </se:FeatureTypeStyle>
-      </te_map:Style>
-      <te_map:SelectionStyle>
-        <se:FeatureTypeStyle version="1.1.0">
-          <se:Name>Selection Style</se:Name>
-          <se:Rule>
-            <se:LineSymbolizer version="1.1.0">
-              <se:Stroke>
-                <se:SvgParameter name="stroke">
-                  <ogc:Literal>#00FF00</ogc:Literal>
-                </se:SvgParameter>
-                <se:SvgParameter name="stroke-opacity">
-                  <ogc:Literal>1.0</ogc:Literal>
-                </se:SvgParameter>
-                <se:SvgParameter name="stroke-width">
-                  <ogc:Literal>1</ogc:Literal>
-                </se:SvgParameter>
-                <se:SvgParameter name="stroke-linejoin">
-                  <ogc:Literal>mitre</ogc:Literal>
-                </se:SvgParameter>
-                <se:SvgParameter name="stroke-linecap">
-                  <ogc:Literal>butt</ogc:Literal>
-                </se:SvgParameter>
-                <se:SvgParameter name="stroke-dasharray">
-                  <ogc:Literal>1 0</ogc:Literal>
-                </se:SvgParameter>
-                <se:SvgParameter name="stroke-dashoffset">
-                  <ogc:Literal>0.0</ogc:Literal>
-                </se:SvgParameter>
-              </se:Stroke>
-              <se:PerpendicularOffset>
-                <ogc:Literal>0.0</ogc:Literal>
-              </se:PerpendicularOffset>
-            </se:LineSymbolizer>
           </se:Rule>
         </se:FeatureTypeStyle>
       </te_map:SelectionStyle>

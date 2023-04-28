@@ -10,7 +10,7 @@ Application{
 	project = "fitofisionomias.tview",
 	description = description,
 	base = "roadmap",
-	zoom = 6.5,
+	zoom = 5,
 	template = {navbar = "darkblue", title = "white"},
 	display = false,
 
