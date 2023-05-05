@@ -36,22 +36,28 @@ Application{
 			}
 
 			local text = ""
-			if cell.Ponto == 1 then
-				text = "Projeto Nexus - <b>Voo 01 Veredas e Pântano Galeria Florestas</b><br/>"	
+	if cell.Ponto == 1 then
+				text = "Projeto Nexus - <b>A SDTF Caatinga Serra da Meruoca</b><br/>"	
 				mreport:addVideo{
 			   width = 560,
 			   heigh = 315,
-			   url = "https://www.youtube.com/embed/oTVE3Fw6xaY",
+			   url = "https://www.youtube.com/embed/dm5HyXIg40I",
+			}
+			elseif cell.Ponto == 2 then
+				text = "Projeto Nexus - <b>HAB Caatina Morro do Chapéu BA</b><br/>"
+				mreport:addVideo{
+			   width = 560,
+			   heigh = 315,
+			   url = "https://www.youtube.com/embed/YKd8ipcRB1U",
 			}
 			else
-				text = "Projeto Nexus - <b>Voo 02 Floresta Tropical Arbórea Sazonalmente Seca</b><br/>"
+				text = "Projeto Nexus - <b>A TF Brejo de Altitude Serra da Ibiapaba</b><br/>"
 				mreport:addVideo{
 			   width = 560,
 			   heigh = 315,
-			   url = "https://www.youtube.com/embed/143IxB0-roU",
+			   url = "https://www.youtube.com/embed/dwJIpPqFFXw",
 			}
-			end
-						
+			end	
 		
 		mreport:addText(text)
 		

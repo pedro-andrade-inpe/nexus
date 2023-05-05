@@ -2,7 +2,8 @@
 "type": "FeatureCollection",
 "name": "points",
 "features": [
-{ "type": "Feature", "properties": { "Ponto": 1 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -45.2123607, -13.9520989 ] ] } },
-{ "type": "Feature", "properties": { "Ponto": 2 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -46.3830304, -13.3553978 ] ] } }
+{ "type": "Feature", "properties": { "Name": "A SDTF Caatinga Serra da Meruoca", "Ponto": 1 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -40.4594858, -3.5639212 ] ] } },
+{ "type": "Feature", "properties": { "Name": "HAB Caatina Morro do Chapéu BA", "Ponto": 2 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -41.3300078, -11.4873157 ] ] } },
+{ "type": "Feature", "properties": { "Name": "A TF Brejo de Altitude Serra da Ibiapaba", "Ponto": 3 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -41.1071704, -4.28369 ] ] } }
 ]
 }
