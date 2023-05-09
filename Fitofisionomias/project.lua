@@ -7,6 +7,6 @@ Project{
 	author = "NEXUS",
 	clean = true,
 	trajectory = "merged02.shp",
-	points = "dot01.shp",
+	points = "dot-0001.shp",
 }
 
