@@ -1,8 +1,9 @@
 import("publish")
 
 local description = [[
-	Esta aplicação apresenta um trabalho de campo para coletar amostragens de solos em <b>novembro de 2021</b>. Estas amostrar irão integrar o mapa de isótopos de Nitrogênio 15 (N15) do solo do Brasil.</br> A isoscape de N15 foi publicada por [Sena-Souza et al. (2019)](https://doi.org/10.1002/ecs2.3223). </br>Trabalho de campo realizado pelos pesquisadores <b>Marcela Miranda</b> e <b>Felipe Pacheco</b>.
-]]
+	Esta aplicação apresenta um trabalho de campo para coletar amostragens de solos em <b>novembro de 2021</b>. Estas amostrar irão integrar o mapa de isótopos de Nitrogênio 15 (N15) do solo do Brasil.</br> A isoscape de N15 foi publicada por ]]..link("https://doi.org/10.1002/ecs2.3223","Sena-Souza et al. (2019).").. [[</br>Trabalho de campo realizado pelos pesquisadores <b>Marcela Miranda</b> e <b>Felipe Pacheco</b>.
+	]]
+
 
 Application{
 	key = "AIzaSyA1coAth-Bo7m99rnxOm2oOBB88AmaSbOk",
