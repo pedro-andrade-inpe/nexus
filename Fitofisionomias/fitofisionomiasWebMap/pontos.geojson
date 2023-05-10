@@ -1,6 +1,6 @@
 {
 "type": "FeatureCollection",
-"name": "points",
+"name": "pontos",
 "features": [
 { "type": "Feature", "properties": { "Name": "A_Tropical Forests_Serra da Ibiapaba_Brejo de Altitute", "Ponto": 1 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -40.84405, -4.0679254 ] ] } },
 { "type": "Feature", "properties": { "Name": "A SDTF Caatinga Serra da Meruoca", "Ponto": 2 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -40.4594858, -3.5639213 ] ] } },

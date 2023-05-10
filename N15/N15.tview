@@ -6,7 +6,7 @@
   <Author>NEXUS</Author>
 
   <te_da:DataSourceList xmlns:te_common="http://www.terralib.org/schemas/common">
-    <te_da:DataSource access_driver="OGR" id="07dbf8cc-e933-4ecb-84c1-bed2ca35a80c" type="OGR">
+    <te_da:DataSource access_driver="OGR" id="545f3cf4-c772-4a93-9378-1757abc0e0ca" type="OGR">
       <te_da:Title>points</te_da:Title>
       <te_da:Description>Created on TerraME</te_da:Description>
       <te_da:URI>file%3A%2F%2F%2Fopt%2Flampp%2Fhtdocs%2Fnexus%2FN15%2Fpontos-2021.shp</te_da:URI>
@@ -16,12 +16,12 @@
   <ComponentList/>
 
   <te_map:LayerList>
-    <te_map:DataSetLayer id="c125d384-4cfe-4988-aafa-7fb7834d0564">
+    <te_map:DataSetLayer id="a53577e5-9e5e-404c-beea-f77a2f7e3070">
       <te_map:Title>points</te_map:Title>
       <te_map:Visible>NOT_VISIBLE</te_map:Visible>
       <te_map:Encoding>ISO-8859-1</te_map:Encoding>
       <te_map:DataSetName>pontos-2021</te_map:DataSetName>
-      <te_map:DataSourceId>07dbf8cc-e933-4ecb-84c1-bed2ca35a80c</te_map:DataSourceId>
+      <te_map:DataSourceId>545f3cf4-c772-4a93-9378-1757abc0e0ca</te_map:DataSourceId>
       <te_map:SRSInfo>
         <te_map:SRID>4674</te_map:SRID>
         <te_map:Proj4>+proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs</te_map:Proj4>
