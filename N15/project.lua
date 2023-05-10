@@ -1,7 +1,7 @@
 import("gis")
 
 Project{
-	title = "Sítios de amostragem de solo para análise isotópica",
+	title = "Sítios de amostragem de solo para análise isotópica.",
   file = "N15.tview", 
 	author = "NEXUS",
 	clean = true,
