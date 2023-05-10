@@ -1,8 +1,8 @@
 import("gis")
 
 Project{
-	title = "teste de aplicação",
-  file = "teste.tview", 
+	title = "Sítios de amostragem de solo para análise isotópica",
+  file = "N15.tview", 
 	author = "NEXUS",
 	clean = true,
 	-- trajectory = "trajectory_petrolina_invert.shp",
