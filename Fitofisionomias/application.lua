@@ -1,9 +1,9 @@
 import("publish")
 
 local description = [[
-	Trabalho de campo feito pelo <b>Museu Nacional</b> para estudo da fitofisionomias dos biomas Cerrado e Caatinga.<br>
-	Tanto esta aplicação quanto o trabalho de campo foram realizados no contexto do projeto <b>Nexus</b>, fomentado pela <b>FAPESP</b>, processo <b>#2017/22269-2</b>.<br>
-	Trabalhos de campo realizados pelos pesquisadores <b>Francisco Pontual, Luis Almeida, Wilson Junior, Nilber Silva, Kayo Costa, Jair da Silva e Leandro Salles.</b>
+	Esta aplicação apresenta vídeos produzidos a partir dos trabalhos de campo realizados pelo <b>Museu Nacional</b> para estudo da fitofisionomias dos biomas Cerrado e Caatinga.<br>
+	Tanto esta aplicação quanto os trabalhos de campo foram realizados no contexto do projeto <b>Nexus</b>, fomentado pela <b>FAPESP</b>, processo <b>#2017/22269-2</b>.<br>
+	Trabalhos de campo realizados pelos pesquisadores <b>Francisco Pontual, Luis Almeida, Wilson Junior, Nilber Silva, Kayo Costa, Jair da Silva</b> e <b>Leandro Salles.</b>
 ]]
 
 Application{
