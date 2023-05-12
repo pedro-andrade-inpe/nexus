@@ -6,27 +6,27 @@
   <Author>NEXUS</Author>
 
   <te_da:DataSourceList xmlns:te_common="http://www.terralib.org/schemas/common">
-    <te_da:DataSource access_driver="OGR" id="cc5adbd0-bad5-4877-847e-08c8aaa936c0" type="OGR">
+    <te_da:DataSource access_driver="OGR" id="2128058d-f63a-4200-b870-ec0cb9180080" type="OGR">
+      <te_da:Title>pontos</te_da:Title>
+      <te_da:Description>Created on TerraME</te_da:Description>
+      <te_da:URI>file%3A%2F%2F%2Fopt%2Flampp%2Fhtdocs%2Fnexus%2Fufp%2Fdot-0002.shp</te_da:URI>
+    </te_da:DataSource>
+    <te_da:DataSource access_driver="OGR" id="ccc0759d-364b-4ce3-a673-2cd6887f7974" type="OGR">
       <te_da:Title>limite</te_da:Title>
       <te_da:Description>Created on TerraME</te_da:Description>
       <te_da:URI>file%3A%2F%2F%2Fopt%2Flampp%2Fhtdocs%2Fnexus%2Fufp%2Fmergedpolly.shp</te_da:URI>
-    </te_da:DataSource>
-    <te_da:DataSource access_driver="OGR" id="d1da6062-eeff-4f84-8ef3-df0e52fd4dfb" type="OGR">
-      <te_da:Title>pontos</te_da:Title>
-      <te_da:Description>Created on TerraME</te_da:Description>
-      <te_da:URI>file%3A%2F%2F%2Fopt%2Flampp%2Fhtdocs%2Fnexus%2Fufp%2Fdot-0001.shp</te_da:URI>
     </te_da:DataSource>
   </te_da:DataSourceList>
 
   <ComponentList/>
 
   <te_map:LayerList>
-    <te_map:DataSetLayer id="3d3795dd-90c1-46e1-ba60-b4ce73220aba">
+    <te_map:DataSetLayer id="44544280-83df-43bf-9258-67af408d3756">
       <te_map:Title>pontos</te_map:Title>
       <te_map:Visible>NOT_VISIBLE</te_map:Visible>
       <te_map:Encoding>ISO-8859-1</te_map:Encoding>
-      <te_map:DataSetName>dot-0001</te_map:DataSetName>
-      <te_map:DataSourceId>d1da6062-eeff-4f84-8ef3-df0e52fd4dfb</te_map:DataSourceId>
+      <te_map:DataSetName>dot-0002</te_map:DataSetName>
+      <te_map:DataSourceId>2128058d-f63a-4200-b870-ec0cb9180080</te_map:DataSourceId>
       <te_map:SRSInfo>
         <te_map:SRID>4326</te_map:SRID>
         <te_map:Proj4>+proj=longlat +datum=WGS84 +no_defs</te_map:Proj4>
@@ -131,12 +131,12 @@
         </se:FeatureTypeStyle>
       </te_map:SelectionStyle>
     </te_map:DataSetLayer>
-    <te_map:DataSetLayer id="a8c033d7-d002-4d6b-82c3-2bbc993bf03c">
+    <te_map:DataSetLayer id="c29c7270-6a0e-4fc3-a82c-86a3a57f9fd4">
       <te_map:Title>limite</te_map:Title>
       <te_map:Visible>NOT_VISIBLE</te_map:Visible>
       <te_map:Encoding>ISO-8859-1</te_map:Encoding>
       <te_map:DataSetName>mergedpolly</te_map:DataSetName>
-      <te_map:DataSourceId>cc5adbd0-bad5-4877-847e-08c8aaa936c0</te_map:DataSourceId>
+      <te_map:DataSourceId>ccc0759d-364b-4ce3-a673-2cd6887f7974</te_map:DataSourceId>
       <te_map:SRSInfo>
         <te_map:SRID>4674</te_map:SRID>
         <te_map:Proj4>+proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs</te_map:Proj4>
