@@ -2,8 +2,8 @@
 import("gis")
 
 Project{
-	title = "Fitofisionomias",
-  file = "fitofisionomias.tview", 
+	title = "Unidades funcionais da paisagem",
+  file = "ufp.tview", 
 	author = "NEXUS",
 	clean = true,
 	limite = "mergedpolly.shp",
