@@ -8,7 +8,7 @@ local description = [[
 
 Application{
 	key = "AIzaSyA1coAth-Bo7m99rnxOm2oOBB88AmaSbOk",
-	project = "fitofisionomias.tview",
+	project = "ufp.tview",
 	description = description,
 	base = "roadmap",
 	zoom = 5,
@@ -29,7 +29,7 @@ Application{
 
 		report = function(cell)
 			local mreport = Report{
-				title = "Fitofisionomias",  -- "name" is an attribute of object
+				title = "Unidades funcionais da paisagem",  -- "name" is an attribute of object
 				author = "NEXUS"
 			}
 

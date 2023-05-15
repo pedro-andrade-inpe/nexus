@@ -3,7 +3,7 @@
 "name": "pontos",
 "features": [
 { "type": "Feature", "properties": { "Name": "A_Tropical Forests_Serra da Ibiapaba_Brejo de Altitute", "Ponto": 1 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -40.84405, -4.0679254 ] ] } },
-{ "type": "Feature", "properties": { "Name": "A SDTF Caatinga Serra da Meruoca", "Ponto": 2 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -40.4594858, -3.5639213 ] ] } },
+{ "type": "Feature", "properties": { "Name": "A SDTF Caatinga Serra da Meruoca", "Ponto": 2 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -40.4595939, -3.5639257 ] ] } },
 { "type": "Feature", "properties": { "Name": "A SDTF Cerradão", "Ponto": 3 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -47.1193956, -11.4471779 ] ] } },
 { "type": "Feature", "properties": { "Name": "HAB Caatina Morro do Chapéu BA", "Ponto": 4 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -41.3300079, -11.4873158 ] ] } },
 { "type": "Feature", "properties": { "Name": "A SDTLF Oeste Baiano", "Ponto": 5 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -44.1761991, -14.4322595 ] ] } },
