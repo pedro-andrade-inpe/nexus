@@ -6,12 +6,12 @@
   <Author>NEXUS</Author>
 
   <te_da:DataSourceList xmlns:te_common="http://www.terralib.org/schemas/common">
-    <te_da:DataSource access_driver="OGR" id="68b0702a-8918-4d55-9055-5d3db312be89" type="OGR">
+    <te_da:DataSource access_driver="OGR" id="6828b846-373f-42fb-acaf-147ec97ffa05" type="OGR">
       <te_da:Title>limite</te_da:Title>
       <te_da:Description>Created on TerraME</te_da:Description>
       <te_da:URI>file%3A%2F%2F%2Fopt%2Flampp%2Fhtdocs%2Fnexus%2Fufp%2Fmergedpolly.shp</te_da:URI>
     </te_da:DataSource>
-    <te_da:DataSource access_driver="OGR" id="ea33309d-b001-4e72-9915-117685603ddf" type="OGR">
+    <te_da:DataSource access_driver="OGR" id="969f1705-13a7-461b-92b6-d35625cd4c3d" type="OGR">
       <te_da:Title>pontos</te_da:Title>
       <te_da:Description>Created on TerraME</te_da:Description>
       <te_da:URI>file%3A%2F%2F%2Fopt%2Flampp%2Fhtdocs%2Fnexus%2Fufp%2Fdot-0002.shp</te_da:URI>
@@ -21,17 +21,17 @@
   <ComponentList/>
 
   <te_map:LayerList>
-    <te_map:DataSetLayer id="573ce4c7-28c2-4a21-99b4-b0e4ad3a4dd0">
+    <te_map:DataSetLayer id="bd6b4477-247b-4a02-9726-7993006d711d">
       <te_map:Title>limite</te_map:Title>
       <te_map:Visible>NOT_VISIBLE</te_map:Visible>
       <te_map:Encoding>ISO-8859-1</te_map:Encoding>
       <te_map:DataSetName>mergedpolly</te_map:DataSetName>
-      <te_map:DataSourceId>68b0702a-8918-4d55-9055-5d3db312be89</te_map:DataSourceId>
+      <te_map:DataSourceId>6828b846-373f-42fb-acaf-147ec97ffa05</te_map:DataSourceId>
       <te_map:SRSInfo>
         <te_map:SRID>4674</te_map:SRID>
         <te_map:Proj4>+proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs</te_map:Proj4>
       </te_map:SRSInfo>
-      <te_map:Extent llx="-57.600309016458603" lly="-25.640932380531169" urx="-38.295674484535382" ury="-3.150746556307753"/>
+      <te_map:Extent llx="-57.600309016458603" lly="-25.640932380531169" urx="-38.295674484535382" ury="-2.9571422628784019"/>
       <te_map:RendererId>ABSTRACT_LAYER_RENDERER</te_map:RendererId>
       <te_map:CompositionMode>0</te_map:CompositionMode>
       <te_map:Style>
@@ -121,12 +121,12 @@
         </se:FeatureTypeStyle>
       </te_map:SelectionStyle>
     </te_map:DataSetLayer>
-    <te_map:DataSetLayer id="48739f3c-63a2-495f-97a0-ba52befc55a0">
+    <te_map:DataSetLayer id="e8dd8c87-b828-4bc6-91ac-1485881d2497">
       <te_map:Title>pontos</te_map:Title>
       <te_map:Visible>NOT_VISIBLE</te_map:Visible>
       <te_map:Encoding>ISO-8859-1</te_map:Encoding>
       <te_map:DataSetName>dot-0002</te_map:DataSetName>
-      <te_map:DataSourceId>ea33309d-b001-4e72-9915-117685603ddf</te_map:DataSourceId>
+      <te_map:DataSourceId>969f1705-13a7-461b-92b6-d35625cd4c3d</te_map:DataSourceId>
       <te_map:SRSInfo>
         <te_map:SRID>4326</te_map:SRID>
         <te_map:Proj4>+proj=longlat +datum=WGS84 +no_defs</te_map:Proj4>
