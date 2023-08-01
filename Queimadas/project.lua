@@ -2,7 +2,7 @@
 import("gis")
 
 project = Project{
-	title = "Região de Queimadas",
+	title = "Coleta de Solos na Região de Queimadas",
 	author = "NEXUS",
 	file = "queimadas.tview",
 	clean = true,

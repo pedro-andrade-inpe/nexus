@@ -2,7 +2,7 @@
 import("gis")
 
 Project{
-	title = "Região de Petrolina",
+	title = "Coleta de Solos na Região de Petrolina",
   file = "petrolina.tview", 
 	author = "NEXUS",
 	clean = true,
