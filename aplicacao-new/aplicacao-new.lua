@@ -24,7 +24,7 @@ Application{
 	title = "Nexus - Caminhos para a sustentabilidade",
 	order = {"Municipios", "Transposicao", "Biomas"}, -- PEDRO
 	description = Projeto.Descricao,
-		output	= "/opt/lampp/htdocs/nexus/Aplicacao-new",
+		output	= "/opt/lampp/htdocs/nexus/aplicacao-new",
     -- output	= "/Applications/MAMP/htdocs/Aplication/07-Nexus",
 
 
