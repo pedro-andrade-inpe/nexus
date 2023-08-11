@@ -220,7 +220,7 @@ Application {
 	Transposicao = View {
 		description = "Área de transposição do Rio São Francisco estudada no projeto Nexus.", -- PEDRO
 		select = "RHI_NM", -- PEDRO
-		color = { "#1d2de0" },
+		color = { "#FFFF00" },
 		report = function(cell)
 			local report = Report {
 				title = cell.RHI_NM,
