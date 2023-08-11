@@ -15,7 +15,7 @@ Project {
 	Municipios = "Municipios.shp",
 	Biomas = "Biomas.shp",
 	Bacias = "bacias.shp",
-	Transposicao = "Transposicao_SFC.shp",
+	Transposicao = "Transposicao_SFQ.shp",
 }
 
 
