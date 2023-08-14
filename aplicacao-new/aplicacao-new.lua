@@ -20,7 +20,7 @@ Project {
 
 
 Application {
-	-- key = "#",
+	-- key = "AIzaSyA1coAth-Bo7m99rnxOm2oOBB88AmaSbOk",
 	project = "Projeto.tview",
 	base = "roadmap",
 	title = "Nexus - Caminhos para a sustentabilidade",
