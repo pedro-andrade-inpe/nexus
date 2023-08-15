@@ -1,6 +1,6 @@
 # NEXUS
 
-To run the application click [here](https://pedro-andrade-inpe.github.io/nexus/aplicacao/index.html).
+To run the Areas-de-estudo click [here](https://pedro-andrade-inpe.github.io/nexus/areasDeEstudo/index.html).
 
 To run the Petrolina click [here](https://pedro-andrade-inpe.github.io/nexus/Petrolina/petrolinaWebMap/index.html).
 

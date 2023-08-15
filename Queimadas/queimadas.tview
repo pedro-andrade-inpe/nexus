@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <Project version="5.5.1" xmlns="http://www.terralib.org/schemas/qt/af" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se" xmlns:te_da="http://www.terralib.org/schemas/dataaccess" xmlns:te_map="http://www.terralib.org/schemas/maptools" xmlns:te_qt_af="http://www.terralib.org/schemas/common/af" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:schemaLocation="http://www.terralib.org/schemas/qt/af /home/flameuss/Downloads/terrame/bin/share/terralib/schemas/terralib/qt/af/project.xsd">
 
-  <Title>Região de Queimadas</Title>
+  <Title>Coleta de Solos na Região de Queimadas</Title>
 
   <Author>NEXUS</Author>
 
   <te_da:DataSourceList xmlns:te_common="http://www.terralib.org/schemas/common">
-    <te_da:DataSource access_driver="OGR" id="3fb31545-3e99-4907-ac04-3568fea03a44" type="OGR">
-      <te_da:Title>points</te_da:Title>
-      <te_da:Description>Created on TerraME</te_da:Description>
-      <te_da:URI>file%3A%2F%2F%2Fopt%2Flampp%2Fhtdocs%2Fnexus%2FQueimadas%2FPontos_campo_solos_abril_comunicacao.shp</te_da:URI>
-    </te_da:DataSource>
-    <te_da:DataSource access_driver="OGR" id="dae133b3-6729-4509-ab9a-f3d9f278faa1" type="OGR">
+    <te_da:DataSource access_driver="OGR" id="42a70ecf-fab1-4671-8a7c-62a3c8f6d4fa" type="OGR">
       <te_da:Title>trajectory</te_da:Title>
       <te_da:Description>Created on TerraME</te_da:Description>
       <te_da:URI>file%3A%2F%2F%2Fopt%2Flampp%2Fhtdocs%2Fnexus%2FQueimadas%2Ftrajectory_campina_grande_invert.shp</te_da:URI>
+    </te_da:DataSource>
+    <te_da:DataSource access_driver="OGR" id="ce60b186-6d5a-42c1-b10f-c54cefcee846" type="OGR">
+      <te_da:Title>points</te_da:Title>
+      <te_da:Description>Created on TerraME</te_da:Description>
+      <te_da:URI>file%3A%2F%2F%2Fopt%2Flampp%2Fhtdocs%2Fnexus%2FQueimadas%2FPontos_campo_solos_abril_comunicacao.shp</te_da:URI>
     </te_da:DataSource>
   </te_da:DataSourceList>
 
   <ComponentList/>
 
   <te_map:LayerList>
-    <te_map:DataSetLayer id="328322a0-644a-494f-a7e2-f05f14852d77">
+    <te_map:DataSetLayer id="149a6dd8-d086-4e9b-b20c-6adcfdaf5573">
       <te_map:Title>trajectory</te_map:Title>
       <te_map:Visible>NOT_VISIBLE</te_map:Visible>
       <te_map:Encoding>ISO-8859-1</te_map:Encoding>
       <te_map:DataSetName>trajectory_campina_grande_invert</te_map:DataSetName>
-      <te_map:DataSourceId>dae133b3-6729-4509-ab9a-f3d9f278faa1</te_map:DataSourceId>
+      <te_map:DataSourceId>42a70ecf-fab1-4671-8a7c-62a3c8f6d4fa</te_map:DataSourceId>
       <te_map:SRSInfo>
         <te_map:SRID>0</te_map:SRID>
         <te_map:Proj4/>
@@ -105,12 +105,12 @@
         </se:FeatureTypeStyle>
       </te_map:SelectionStyle>
     </te_map:DataSetLayer>
-    <te_map:DataSetLayer id="fb0f4fc0-05dc-46dc-b631-704e7afa8c8f">
+    <te_map:DataSetLayer id="30e45280-04dc-48a6-bf99-61cca132c05b">
       <te_map:Title>points</te_map:Title>
       <te_map:Visible>NOT_VISIBLE</te_map:Visible>
       <te_map:Encoding>ISO-8859-1</te_map:Encoding>
       <te_map:DataSetName>Pontos_campo_solos_abril_comunicacao</te_map:DataSetName>
-      <te_map:DataSourceId>3fb31545-3e99-4907-ac04-3568fea03a44</te_map:DataSourceId>
+      <te_map:DataSourceId>ce60b186-6d5a-42c1-b10f-c54cefcee846</te_map:DataSourceId>
       <te_map:SRSInfo>
         <te_map:SRID>4674</te_map:SRID>
         <te_map:Proj4>+proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs</te_map:Proj4>
