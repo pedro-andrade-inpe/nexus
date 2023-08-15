@@ -1,5 +1,5 @@
 --[[
-	Aplicação utilizando as regições de estudo do Projeto Nexus
+	Aplicação utilizando as regiões de estudo do Projeto Nexus
 ]]
    --
 
@@ -26,7 +26,7 @@ Application {
 	title = "Nexus - Caminhos para a sustentabilidade",
 	order = { "Municipios", "Bacias", "Transposicao", "Biomas" }, -- PEDRO
 	description = Projeto.Descricao,
-	output = "/opt/lampp/htdocs/nexus/aplicacao-new",
+	output = "/opt/lampp/htdocs/nexus/areasDeEstudo",
 	-- output	= "/Applications/MAMP/htdocs/Aplication/07-Nexus",
 
 
