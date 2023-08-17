@@ -195,20 +195,20 @@ Application {
 		report = function(cell)
 			local report = Report {
 				title = cell.rhi_nm,
-				author = "Fonte: Wikipidia",
+				-- author = "",
 			}
 
 			-- Parnaiba --
-			if cell.rhi_nm == 'PARNAÍBA' then
+			if cell.rhi_sg == "D" then
 				dofile("Report_Parnaiba.lua")
-				report:addText(Parnaiba.toponimo)
-				report:addHeading("<center><h2>Bacía Hidrográfica</h2></center>")
+				-- report:addText(Parnaiba.toponimo)
+				report:addHeading("<center><h2>Bacia Hidrográfica do Rio Parnaíba</h2></center>")
 				report:addText(Parnaiba.historia)
 			else
 				-- São Francisco --
 				dofile("Report_Sao_Francisco.lua")
 				report:addText(Sao_Francisco.toponimo)
-				report:addHeading("<center><h2>História</h2></center>")
+				report:addHeading("<center><h2>Bacia do Rio São Francisco</h2></center>")
 				report:addText(Sao_Francisco.historia)
 			end -- fecha if
 
@@ -224,13 +224,13 @@ Application {
 		report = function(cell)
 			local report = Report {
 				title = cell.RHI_NM,
-				author = "Fonte: Wikipidia",
+				-- author = "Fonte: Wikipidia",
 			}
 
 			-- São Francisco --
 			dofile("Report_Transposicao.lua")
 			-- report:addText(Transposicao.toponimo)
-			report:addHeading("<center><h2>História</h2></center>")
+			report:addHeading("<center><h2>Área de transposição do Rio São Francisco</h2></center>")
 			report:addText(Transposicao.historia)
 
 
