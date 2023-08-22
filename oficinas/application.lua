@@ -37,16 +37,26 @@ Application {
         title = "teste",
       }
 
-      local text = ""
+      
       if cell.Local == "Campina-Grande" then
-        text = "Campina Grande-PB e municípios ao entorno"
+        report:addText("Campina Grande-PB e municípios ao entorno")
+        report:addSeparator()
+        report:addImage("CampinaGrande1.jpg")
+        report:addImage("CampinaGrande2.jpg")
       elseif cell.Local == "Barreiras" then
-        text = "Barreiras e municípios vizinhos"
+        report:addText("Barreiras e municípios vizinhos")
+        report:addSeparator()
+        report:addImage("Barreiras1.jpg")
+        report:addImage("Barreiras2.jpg")
+        report:addImage("Barreiras3.jpg")
       else
-        text = "Petrolina/Juazeiro e municípios ao entorno "
+        report:addText("Petrolina/Juazeiro e municípios ao entorno ")
+        report:addSeparator()
+        report:addImage("Petrolina.jpg")
+        report:addImage("Petrolina4.jpg")
       end
 
-      report:addText(text)
+      
       return report
     end
   }
