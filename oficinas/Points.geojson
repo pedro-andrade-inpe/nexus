@@ -2,8 +2,8 @@
 "type": "FeatureCollection",
 "name": "Points",
 "features": [
-{ "type": "Feature", "properties": { "Local": "Campina-Grande", "ID": "1" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -35.8998529, -7.2312502 ] ] } },
-{ "type": "Feature", "properties": { "Local": "Barreiras", "ID": "2" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -45.0099266, -12.1382794 ] ] } },
-{ "type": "Feature", "properties": { "Local": "Petrolina", "ID": "3" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -40.4995214, -9.3992469 ] ] } }
+{ "type": "Feature", "properties": { "Local": "Campina-Grande", "ID": "1", "Descricao": "Campina Grande-PB e municípios ao entorno." }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -35.8998529, -7.2312502 ] ] } },
+{ "type": "Feature", "properties": { "Local": "Barreiras", "ID": "2", "Descricao": "Barreiras e municípios vizinhos." }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -45.0099266, -12.1382794 ] ] } },
+{ "type": "Feature", "properties": { "Local": "Petrolina", "ID": "3", "Descricao": "Petrolina\/Juazeiro e municípios ao entorno." }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -40.4995214, -9.3992469 ] ] } }
 ]
 }

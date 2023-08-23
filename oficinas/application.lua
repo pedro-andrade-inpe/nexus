@@ -7,7 +7,7 @@ local description = [[
 ]]
 
 Project {
-  title = "Oficinas NEXUS – Escala local",
+  title = "Oficinas Participativas do Projeto Nexus",
   author = "NEXUS",
   file = "project.tview",
   clean = true,
@@ -34,22 +34,25 @@ Application {
 
     report = function(cell)
       local report = Report{
-        title = "teste",
+        title = cell.Descricao,
       }
 
       
       if cell.Local == "Campina-Grande" then
+        report:addHeading("<center><h2>Campina Grande-PB e municípios ao entorno</h2></center>")
         report:addText("Campina Grande-PB e municípios ao entorno")
         report:addSeparator()
         report:addImage("CampinaGrande1.jpg")
         report:addImage("CampinaGrande2.jpg")
       elseif cell.Local == "Barreiras" then
+        report:addHeading("<center><h2>Barreiras e municípios vizinhos</h2></center>")
         report:addText("Barreiras e municípios vizinhos")
         report:addSeparator()
         report:addImage("Barreiras1.jpg")
         report:addImage("Barreiras2.jpg")
         report:addImage("Barreiras3.jpg")
       else
+        report:addHeading("<center><h2>Petrolina/Juazeiro e municípios ao entorno</h2></center>")
         report:addText("Petrolina/Juazeiro e municípios ao entorno ")
         report:addSeparator()
         report:addImage("Petrolina.jpg")
