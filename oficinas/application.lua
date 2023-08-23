@@ -38,9 +38,35 @@ Application {
       }
 
       text = "Esta oficina ocorreu de "..cell.F12.." até "..cell.F3.." de 2022.<br> Um total de "..cell.Par.." colaboradores participaram do evento, que abrangeu "..cell.QMun.. " municípios."
+     
+        Descricao = [[<h3>Descrição:</h3>
+      Setor Privado - <b>(Empresas, consultorias, Associações representando setor privado)</b><br>
+      Governo - <b>(Executivo, Legislativo ou Judiciário)</b><br>
+      Sociedade Civil - <b>(ONGs, Movimentos sociais, Associações, etc.)</b><br>
+      Academia - <b>(Institutos de Pesquisa Públicas/Privadas e universidades)</b><br>]]
+
+      Interesse = {
+        class = "bar",
+        id = "1",
+        titile = [[Atores por setor de interesse na Escala local]],
+        columns = {
+          "Setor Privado",
+          "Governo.",
+          "Sociedade Civil",
+          "Academia"
+        },
+        values = {
+          {
+            "Atores convidados",
+            cell.SPri,
+            cell.Gov,
+            cell.SCivil,
+            cell.Aca
+          }
+        }
+      }
 
       if cell.Local == "Campina-Grande" then
-        dofile("Report_CampinaGrande.lua")
         report:addText(text)
         report:addGraphic(Interesse)
         report:addText(Descricao)
@@ -48,7 +74,6 @@ Application {
         report:addImage("CampinaGrande1.jpg")
         report:addImage("CampinaGrande2.jpg")
       elseif cell.Local == "Barreiras" then
-        dofile("Report_Barreiras.lua")
         report:addText(text)
         report:addGraphic(Interesse)
         report:addText(Descricao)
@@ -57,11 +82,9 @@ Application {
         report:addImage("Barreiras2.jpg")
         report:addImage("Barreiras3.jpg")
       else
-        dofile("Report_Petrolina.lua")
         report:addText(text)
         report:addGraphic(Interesse)
         report:addText(Descricao)
-        -- report:addText()
         report:addSeparator()
         report:addImage("Petrolina.jpg")
         report:addImage("Petrolina4.jpg")

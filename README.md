@@ -9,3 +9,5 @@ To run the Queimadas click [here](https://pedro-andrade-inpe.github.io/nexus/Que
 To run the Unidades funcionais da paisagem click [here](https://pedro-andrade-inpe.github.io/nexus/ufp/ufpWebMap/index.html).
 
 To run the N15 click [here](https://pedro-andrade-inpe.github.io/nexus/N15/N15WebMap/index.html).
+
+To run the oficinas click [here](https://pedro-andrade-inpe.github.io/nexus/oficinas/index.html)
