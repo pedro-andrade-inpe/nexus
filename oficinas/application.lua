@@ -37,23 +37,31 @@ Application {
         title = cell.Descricao,
       }
 
-      
+      text = "Esta oficina ocorreu de "..cell.F12.." até "..cell.F3.." de 2022.<br> Um total de "..cell.Par.." colaboradores participaram do evento, que abrangeu "..cell.QMun.. " municípios."
+
       if cell.Local == "Campina-Grande" then
-        report:addHeading("<center><h2>Campina Grande-PB e municípios ao entorno</h2></center>")
-        report:addText("Campina Grande-PB e municípios ao entorno")
+        dofile("Report_CampinaGrande.lua")
+        report:addText(text)
+        report:addGraphic(Interesse)
+        report:addText(Descricao)
         report:addSeparator()
         report:addImage("CampinaGrande1.jpg")
         report:addImage("CampinaGrande2.jpg")
       elseif cell.Local == "Barreiras" then
-        report:addHeading("<center><h2>Barreiras e municípios vizinhos</h2></center>")
-        report:addText("Barreiras e municípios vizinhos")
+        dofile("Report_Barreiras.lua")
+        report:addText(text)
+        report:addGraphic(Interesse)
+        report:addText(Descricao)
         report:addSeparator()
         report:addImage("Barreiras1.jpg")
         report:addImage("Barreiras2.jpg")
         report:addImage("Barreiras3.jpg")
       else
-        report:addHeading("<center><h2>Petrolina/Juazeiro e municípios ao entorno</h2></center>")
-        report:addText("Petrolina/Juazeiro e municípios ao entorno ")
+        dofile("Report_Petrolina.lua")
+        report:addText(text)
+        report:addGraphic(Interesse)
+        report:addText(Descricao)
+        -- report:addText()
         report:addSeparator()
         report:addImage("Petrolina.jpg")
         report:addImage("Petrolina4.jpg")
