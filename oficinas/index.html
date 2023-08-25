@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<title>Oficinas Participativas do Projeto Nexus</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+		<link rel="stylesheet" href="./publish.min.css"/>
+	</head>
+	<body>
+		<div class="container">
+			<nav class="navbar navbar-fixed-top navbar-light" style="background-color: rgba(0, 0, 139, 1);" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand custom-font-app-title" style="color: rgba(255, 255, 255, 1);">Oficinas Participativas do Projeto Nexus</a>
+					</div>
+					
+				</div>
+			</nav>
+		</div>
+		<div class="navbar-offset"></div>
+		<div id="map-canvas">
+			<div id="map"></div>
+		</div>
+		<div class="row main-row">
+		<!-- Menu -->
+			<div class="col-sm-4 col-md-2 sidebar sidebar-left pull-left">
+				<div class="panel-group sidebar-body panel-height" id="accordion-left">
+					<div class="panel panel-default">
+						<div class="panel-heading padding-header" >
+							<h4 class="panel-title custom-font-subtitle border body-font-color">
+								<i class=""></i><a id="layers-title" data-toggle="collapse" href="#layers"> Layers</a>
+								<span class="pull-right slide-submenu icon-style"><i class="fa fa-times"></i></span>
+							</h4>
+						</div>
+						<div id="layers" class="panel-collapse collapse in overflow-y">
+								<div class="panel-body list-group padding-body">
+										<label>
+											<input name="Points" type="checkbox">
+											<a id="Points" href="javascript:void(0);"> Points </a>
+										</label>
+								</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading padding-header">
+							<h4 class="panel-title custom-font-subtitle border body-font-color">
+								<i class=""></i><a id="description-title" data-toggle="collapse" href="#properties"> Description</a>
+							</h4>
+						</div>
+						<div id="properties" class="panel-collapse collapse overflow-y">
+							<div class="panel-body padding-body">
+								<p class="custom-font-body" id="layer-description"></p>
+								<button id="more" type="button" class="btn btn-default custom-font-more" style="display:none;">
+									More
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading padding-header">
+							<h4 class="panel-title custom-font-subtitle border body-font-color">
+								<i class=""></i><a id="legend-title" data-toggle="collapse" href="#legends"> Legend</a>
+							</h4>
+						</div>
+						<div id="legends" class="panel-collapse collapse overflow-y">
+							<div id="legend" class="panel-body padding-body custom-font-legend"></div>
+						</div>
+					</div>
+					<div id="panel-download" class="panel panel-default">
+						<div class="panel-heading padding-header" style="height: 29px;">
+							<h4 class="panel-title custom-font-subtitle border body-font-color">
+								<i class="fa fa-download"></i><a id="download-title"> Download</a>
+							</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- fim do menu -->
+		</div>
+		<div class="mini-submenu mini-submenu-left pull-left icon-style">
+			<i class="fa fa-bars"></i>
+		</div>
+		<img id="loader" src="./default.gif" hidden="hidden"/>
+		<div id="loader-message"><h4 id="loader-message-text"></h4></div>
+		<footer class="navbar-default navbar-fixed-bottom">
+			<div id="footer" class="container-fluid">
+				<p>Powered by package <a href="https://github.com/TerraME/publish" target="_blank">publish</a> of <a href="http://www.terrame.org" target="_blank">TerraME</a>.</p>
+			</div>
+		</footer>
+		<div class="modal fade modal-player" id="modal-app-description" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title custom-font-subtitle">Oficinas Participativas do Projeto Nexus</h4>
+					</div>
+					<div class="modal-body">
+						<p class="custom-font-body">  O projeto NEXUS prevê a adoção de um processo em multi-escala. Além da escala regional (Cerrado, Caatinga e Bacias do São Francisco e Paranaiba), foram selecionadas 3 escalas locais. Foi realizado um processo quantitativo, baseado em indicadores e viagens de campo exploratórias no qual um conjunto inicial de municípios foi selecionado. Estes municípios se caracterizam por apresentarem uma problemática relacionada ao tema central do projeto: Nexus água-agricultura-energia.
+</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-info" data-dismiss="modal">Ok</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade modal-player" id="modal-report-PointsCampina-Grande" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h2 class="modal-title custom-font-report-title" id="modal-report-label-PointsCampina-Grande"> Campina Grande-PB e municípios ao entorno.</h2>
+					</div>
+					<div class="modal-body" id="modal-report-text-PointsCampina-Grande">
+													<p class="custom-font-body">Esta oficina ocorreu de 26 de abril até 27 de Abril de 2022.<br> Um total de 25 colaboradores participaram do evento, que abrangeu 27 municípios.</p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+						<!-- Function addGraphic -->
+							<table class="bar table table-hover Campina-Grande-1 hidden" id="data">
+								<tr>
+									<th colspan="100%" class="text-center">Campina Grande-PB e municípios ao entorno.</th>
+								</tr>
+								<tr>
+									<th></th>
+										<th>Setor Privado</th>
+										<th>Governo.</th>
+										<th>Sociedade Civil</th>
+										<th>Academia</th>
+								</tr>
+										<tr>
+											<td>Atores convidados</td><td>6</td><td>7</td><td>7</td><td>5</td>
+										</tr>
+							</table>
+							<div style="width: 800px; height: 500px">
+								<br/>
+								<canvas class="chart" id="Campina-Grande-1" ></canvas>
+								<br/>
+							</div>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+													<p class="custom-font-body"><h3>Descrição:</h3>
+      Setor Privado - <b>(Empresas, consultorias, Associações representando setor privado)</b><br>
+      Governo - <b>(Executivo, Legislativo ou Judiciário)</b><br>
+      Sociedade Civil - <b>(ONGs, Movimentos sociais, Associações, etc.)</b><br>
+      Academia - <b>(Institutos de Pesquisa Públicas/Privadas e universidades)</b><br></p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+												<hr>
+						<!-- Function add Video Youtube/Vimeo -->
+													<img class="report-img" src="CampinaGrande1.jpg"/>
+							<br/>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+													<img class="report-img" src="CampinaGrande2.jpg"/>
+							<br/>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade modal-player" id="modal-report-PointsBarreiras" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h2 class="modal-title custom-font-report-title" id="modal-report-label-PointsBarreiras"> Barreiras e municípios vizinhos.</h2>
+					</div>
+					<div class="modal-body" id="modal-report-text-PointsBarreiras">
+													<p class="custom-font-body">Esta oficina ocorreu de 28 de Junho até 29 de Junho de 2022.<br> Um total de 22 colaboradores participaram do evento, que abrangeu 20 municípios.</p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+						<!-- Function addGraphic -->
+							<table class="bar table table-hover Barreiras-1 hidden" id="data">
+								<tr>
+									<th colspan="100%" class="text-center">Barreiras e municípios vizinhos.</th>
+								</tr>
+								<tr>
+									<th></th>
+										<th>Setor Privado</th>
+										<th>Governo.</th>
+										<th>Sociedade Civil</th>
+										<th>Academia</th>
+								</tr>
+										<tr>
+											<td>Atores convidados</td><td>4</td><td>5</td><td>8</td><td>5</td>
+										</tr>
+							</table>
+							<div style="width: 800px; height: 500px">
+								<br/>
+								<canvas class="chart" id="Barreiras-1" ></canvas>
+								<br/>
+							</div>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+													<p class="custom-font-body"><h3>Descrição:</h3>
+      Setor Privado - <b>(Empresas, consultorias, Associações representando setor privado)</b><br>
+      Governo - <b>(Executivo, Legislativo ou Judiciário)</b><br>
+      Sociedade Civil - <b>(ONGs, Movimentos sociais, Associações, etc.)</b><br>
+      Academia - <b>(Institutos de Pesquisa Públicas/Privadas e universidades)</b><br></p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+												<hr>
+						<!-- Function add Video Youtube/Vimeo -->
+													<img class="report-img" src="Barreiras1.jpg"/>
+							<br/>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+													<img class="report-img" src="Barreiras2.jpg"/>
+							<br/>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+													<img class="report-img" src="Barreiras3.jpg"/>
+							<br/>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade modal-player" id="modal-report-PointsPetrolina" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h2 class="modal-title custom-font-report-title" id="modal-report-label-PointsPetrolina"> Petrolina/Juazeiro e municípios ao entorno.</h2>
+					</div>
+					<div class="modal-body" id="modal-report-text-PointsPetrolina">
+													<p class="custom-font-body">Esta oficina ocorreu de 18 de Agosto até 19 de Outubro de 2022.<br> Um total de 25 colaboradores participaram do evento, que abrangeu 11 municípios.</p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+						<!-- Function addGraphic -->
+							<table class="bar table table-hover Petrolina-1 hidden" id="data">
+								<tr>
+									<th colspan="100%" class="text-center">Petrolina/Juazeiro e municípios ao entorno.</th>
+								</tr>
+								<tr>
+									<th></th>
+										<th>Setor Privado</th>
+										<th>Governo.</th>
+										<th>Sociedade Civil</th>
+										<th>Academia</th>
+								</tr>
+										<tr>
+											<td>Atores convidados</td><td>7</td><td>4</td><td>7</td><td>6</td>
+										</tr>
+							</table>
+							<div style="width: 800px; height: 500px">
+								<br/>
+								<canvas class="chart" id="Petrolina-1" ></canvas>
+								<br/>
+							</div>
+												
+						<!-- Function add Video Youtube/Vimeo -->
+													<p class="custom-font-body"><h3>Descrição:</h3>
+      Setor Privado - <b>(Empresas, consultorias, Associações representando setor privado)</b><br>
+      Governo - <b>(Executivo, Legislativo ou Judiciário)</b><br>
+      Sociedade Civil - <b>(ONGs, Movimentos sociais, Associações, etc.)</b><br>
+      Academia - <b>(Institutos de Pesquisa Públicas/Privadas e universidades)</b><br></p>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+												<hr>
+						<!-- Function add Video Youtube/Vimeo -->
+													<img class="report-img" src="Petrolina.jpg"/>
+							<br/>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+													<img class="report-img" src="Petrolina4.jpg"/>
+							<br/>
+						
+						<!-- Function add Video Youtube/Vimeo -->
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="modal-completed-description" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title custom-font-subtitle" id="modal-title-description"></h4>
+					</div>
+					<div class="modal-body">
+						<p class="custom-font-body" id="info-description"></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-info" data-dismiss="modal">Ok</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="./jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+		
+		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		
+		<script type="text/javascript" src="./config.js"></script>
+		<script type="text/javascript" src="./publish.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+		<script type="text/javascript" src="./graphic.js"></script>
+		<script type="text/javascript" src="./player.js"></script>
+
+	</body>
+</html>
+
