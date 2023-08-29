@@ -20,7 +20,7 @@ Application {
   base = "roadmap",
   description = description,
   output = "/opt/lampp/htdocs/nexus/oficinas",
-  order = {"Points"},
+  order = { "Points" },
   template = { navbar = "darkblue", title = "white" },
   display = false,
 
@@ -33,35 +33,48 @@ Application {
     label = "locais",
 
     report = function(cell)
-      local report = Report{
+      local report = Report {
         title = cell.Descricao,
       }
 
-      text = "Esta oficina ocorreu de "..cell.F12.." até "..cell.F3.." de 2022.<br> Um total de "..cell.Par.." colaboradores participaram do evento, que abrangeu "..cell.QMun.. " municípios."
-     
-        Descricao = [[<h3>Descrição:</h3>
-      Setor Privado - <b>(Empresas, consultorias, Associações representando setor privado)</b><br>
-      Governo - <b>(Executivo, Legislativo ou Judiciário)</b><br>
-      Sociedade Civil - <b>(ONGs, Movimentos sociais, Associações, etc.)</b><br>
-      Academia - <b>(Institutos de Pesquisa Públicas/Privadas e universidades)</b><br>]]
+      text = "Esta oficina ocorreu de " ..
+          cell.F12 ..
+          " até " ..
+          cell.F3 ..
+          " de 2022.<br> Um total de " ..
+          cell.Par .. " colaboradores participaram do evento, que abrangeu " .. cell.QMun .. " municípios."
+
+      Descricao = [[<h3>Descrição:</h3>
+      Setor Privado - Empresas, consultorias, Associações representando setor privado<br>
+      Governo - Executivo, Legislativo ou Judiciário<br>
+      Sociedade Civil - ONGs, Movimentos sociais, Associações, etc.<br>
+      Academia - Institutos de Pesquisa Públicas/Privadas e universidades<br>]]
 
       Interesse = {
         class = "bar",
         id = "1",
-        titile = [[Atores por setor de interesse na Escala local]],
+        beginAtZero = true,
+
+        -- titile = [[Atores por setor de interesse na Escala local]],
+        
+       
+            
         columns = {
           "Setor Privado",
-          "Governo.",
+          "Participantes do Governo",
           "Sociedade Civil",
           "Academia"
         },
+        
         values = {
           {
             "Atores convidados",
             cell.SPri,
             cell.Gov,
             cell.SCivil,
-            cell.Aca
+            cell.Aca,
+            0,
+            10
           }
         }
       }
@@ -90,7 +103,7 @@ Application {
         report:addImage("Petrolina4.jpg")
       end
 
-      
+
       return report
     end
   }
