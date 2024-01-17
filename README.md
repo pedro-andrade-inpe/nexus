@@ -13,7 +13,7 @@ To run the N15 click [here](https://pedro-andrade-inpe.github.io/nexus/N15/N15We
 To run the oficinas click [here](https://pedro-andrade-inpe.github.io/nexus/oficinas/index.html)
 
 
-# BUILDING
+# BUILD
 
 To run the site campo click [here](https://pedro-andrade-inpe.github.io/nexus/campo/sitecampo/).
 
