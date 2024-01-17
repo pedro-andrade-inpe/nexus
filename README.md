@@ -15,7 +15,7 @@ To run the oficinas click [here](https://pedro-andrade-inpe.github.io/nexus/ofic
 
 # BUILD
 
-To run the site campo click [here](https://pedro-andrade-inpe.github.io/nexus/campo/sitecampo/).
+To run the site campo click [here](https://pedro-andrade-inpe.github.io/nexus/campo/sitecampo/index.html).
 
-To run the site info click [here](https://pedro-andrade-inpe.github.io/nexus/info/siteinfo/).
+To run the site info click [here](https://pedro-andrade-inpe.github.io/nexus/info/siteinfo/index.html).
 
