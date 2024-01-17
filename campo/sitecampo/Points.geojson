@@ -1,0 +1,22 @@
+{
+"type": "FeatureCollection",
+"name": "Points",
+"features": [
+{ "type": "Feature", "properties": { "Cobertura": "Nativa", "Local": "Campina Grande (PB)" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -35.976389, -7.280556 ] ] } },
+{ "type": "Feature", "properties": { "Cobertura": "Pastagem", "Local": "Campina Grande (PB)" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -36.529722, -7.378333 ] ] } },
+{ "type": "Feature", "properties": { "Cobertura": "Agro", "Local": "Campina Grande (PB)" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -36.487222, -7.176944 ] ] } },
+{ "type": "Feature", "properties": { "Cobertura": "Agro", "Local": "Campina Grande (PB)" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -36.971944, -7.254722 ] ] } },
+{ "type": "Feature", "properties": { "Cobertura": "Agro", "Local": "Campina Grande (PB)" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -35.97, -7.280556 ] ] } },
+{ "type": "Feature", "properties": { "Cobertura": "Nativa", "Local": "S. Talhada (PE)" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -38.384167, -7.277222 ] ] } },
+{ "type": "Feature", "properties": { "Cobertura": "Pastagem", "Local": "S. Talhada (PE)" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -38.384722, -7.886111 ] ] } },
+{ "type": "Feature", "properties": { "Cobertura": "Agro", "Local": "S. Talhada (PE)" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -38.298333, -7.991944 ] ] } },
+{ "type": "Feature", "properties": { "Cobertura": "Nativa", "Local": "Petrolina (PE)" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -40.321111, -9.046389 ] ] } },
+{ "type": "Feature", "properties": { "Cobertura": "Pastagem", "Local": "Petrolina (PE)" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -40.618056, -9.619444 ] ] } },
+{ "type": "Feature", "properties": { "Cobertura": "Agro", "Local": "Petrolina (PE)" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -40.697222, -9.336667 ] ] } },
+{ "type": "Feature", "properties": { "Cobertura": "Nativa", "Local": "Barreiras (BA)" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -45.02, -12.1475 ] ] } },
+{ "type": "Feature", "properties": { "Cobertura": "Nativa", "Local": "Barreiras (BA)" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -45.71, -12.08 ] ] } },
+{ "type": "Feature", "properties": { "Cobertura": "Pastagem", "Local": "Barreiras (BA)" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -45.02, -12.15 ] ] } },
+{ "type": "Feature", "properties": { "Cobertura": "Agro", "Local": "Barreiras (BA)" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -45.63, -11.87 ] ] } },
+{ "type": "Feature", "properties": { "Cobertura": "Agro", "Local": "Barreiras (BA)" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -45.630278, -11.87 ] ] } }
+]
+}
