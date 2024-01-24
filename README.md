@@ -1,6 +1,6 @@
 # NEXUS
 
-To run the Areas-de-estudo click <a htref="https://pedro-andrade-inpe.github.io/nexus/areasDeEstudo/index.html" target="_blank">here</a>.
+To run the Areas-de-estudo click <a href="https://pedro-andrade-inpe.github.io/nexus/areasDeEstudo/index.html" target="_blank"> here </a>.
 
 To run the Petrolina click [here](https://pedro-andrade-inpe.github.io/nexus/Petrolina/petrolinaWebMap/index.html){target="_blank" rel="noopener"}.
 
