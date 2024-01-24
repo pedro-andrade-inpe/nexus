@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <Project version="5.5.1" xmlns="http://www.terralib.org/schemas/qt/af" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se" xmlns:te_da="http://www.terralib.org/schemas/dataaccess" xmlns:te_map="http://www.terralib.org/schemas/maptools" xmlns:te_qt_af="http://www.terralib.org/schemas/common/af" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:schemaLocation="http://www.terralib.org/schemas/qt/af /home/luis/terrame/bin/share/terralib/schemas/terralib/qt/af/project.xsd">
 
-  <Title>site-info</Title>
+  <Title>site campo</Title>
 
   <Author>NEXUS</Author>
 
   <te_da:DataSourceList xmlns:te_common="http://www.terralib.org/schemas/common">
-    <te_da:DataSource access_driver="OGR" id="1b6b8b2d-0424-4a4f-a475-094d2d4a2e26" type="OGR">
+    <te_da:DataSource access_driver="OGR" id="fcd3e12b-4a20-46ba-951f-c6f333d75cf3" type="OGR">
       <te_da:Title>points</te_da:Title>
       <te_da:Description>Created on TerraME</te_da:Description>
-      <te_da:URI>file%3A%2F%2F%2Fhome%2Fluis%2FTi%2FInpe%2Fnew-webmapping%2Finfo%2Finfo.shp</te_da:URI>
+      <te_da:URI>file%3A%2F%2F%2Fhome%2Fluis%2FTi%2FInpe%2Fnew-webmapping%2Fcampo%2Fcampo_001.shp</te_da:URI>
     </te_da:DataSource>
   </te_da:DataSourceList>
 
   <ComponentList/>
 
   <te_map:LayerList>
-    <te_map:DataSetLayer id="dcb0aa31-c333-471f-9bc3-8afbbd87c68d">
+    <te_map:DataSetLayer id="fa822f5d-276f-45a4-a623-3d54506c203d">
       <te_map:Title>points</te_map:Title>
       <te_map:Visible>NOT_VISIBLE</te_map:Visible>
       <te_map:Encoding>ISO-8859-1</te_map:Encoding>
-      <te_map:DataSetName>info</te_map:DataSetName>
-      <te_map:DataSourceId>1b6b8b2d-0424-4a4f-a475-094d2d4a2e26</te_map:DataSourceId>
+      <te_map:DataSetName>campo_001</te_map:DataSetName>
+      <te_map:DataSourceId>fcd3e12b-4a20-46ba-951f-c6f333d75cf3</te_map:DataSourceId>
       <te_map:SRSInfo>
-        <te_map:SRID>4326</te_map:SRID>
-        <te_map:Proj4>+proj=longlat +datum=WGS84 +no_defs</te_map:Proj4>
+        <te_map:SRID>4674</te_map:SRID>
+        <te_map:Proj4>+proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs</te_map:Proj4>
       </te_map:SRSInfo>
-      <te_map:Extent llx="-45.710000000000001" lly="-12.15" urx="-35.969999999999999" ury="-7.1769439999999998"/>
+      <te_map:Extent llx="-45.017663873568047" lly="-12.147632121273126" urx="-35.904216155403269" ury="-7.1779332887869556"/>
       <te_map:RendererId>ABSTRACT_LAYER_RENDERER</te_map:RendererId>
       <te_map:CompositionMode>0</te_map:CompositionMode>
       <te_map:Style>

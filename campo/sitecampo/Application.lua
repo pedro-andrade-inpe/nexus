@@ -1,46 +1,45 @@
-import("gis")
 import("publish")
+import("gis")
+
+Project {
+  title = "site campo",
+  author = "NEXUS",
+  file = "campo001.tview",
+  clean = true,
+  points = "campo_001.shp",
+}
 
 
 description = [[
-  input text here!
+  teste site campo  teste 04!
 ]]
-
-Project {
-  title = "INFO",
-  author = "NEXUS",
-  file = "info.tview",
-  clean = true,
-  Points = "info.shp",
-}
 
 Application {
   key = "AIzaSyA1coAth-Bo7m99rnxOm2oOBB88AmaSbOk",
-  project = "info.tview",
+  project = "campo001.tview",
   base = "roadmap",
   description = description,
-  output = "/opt/lampp/htdocs/new-webmapping/map/site",
-  order = { "Points" },
+  output = "/home/luis/Ti/Inpe/new-webmapping/campo/sitecampo",
   template = { navbar = "darkblue", title = "white" },
   display = false,
 
-  Points = View {
-    description = "Coberturas",
-    select = "Local",
+  points = View {
+    missing = 1,
+    description = "Localidades visitadas",
+    select = "Ponto",
     icon = "flag",
-    label = "locais",
+    label = "ponto de coleta",
 
     report = function(cell)
       local report = Report {
-        title = cell.titulo,
+        title = "Ponto de Coleta de Solo e Vegetação",         -- "name" is an attribute of object
+        author = "NEXUS"
       }
 
-      Descricao = [[<h3>Descrição:</h3> input description here!]]
-
-      local text = "Local: " .. cell.Local .. "<br>tipo: " .. cell.Cobertura .. "."
+      local text = "Local: <b>" .. cell.Local .. "</b><br>Id:<b> " .. cell.fid .. "</b>"
 
       report:addText(text)
-      -- report:addImage("photos/"..cell.Fotografia..".jpg")
+      report:addImage("photos/"..cell.Fotografia..".png")
 
 
       return report
