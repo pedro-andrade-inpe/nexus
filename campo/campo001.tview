@@ -6,22 +6,22 @@
   <Author>NEXUS</Author>
 
   <te_da:DataSourceList xmlns:te_common="http://www.terralib.org/schemas/common">
-    <te_da:DataSource access_driver="OGR" id="94d2478d-6131-43b9-912b-74f31d408ae2" type="OGR">
+    <te_da:DataSource access_driver="OGR" id="d84da020-e7df-4a73-8b61-490cfdb8357e" type="OGR">
       <te_da:Title>points</te_da:Title>
       <te_da:Description>Created on TerraME</te_da:Description>
-      <te_da:URI>file%3A%2F%2F%2Fhome%2Fluis%2FTi%2FInpe%2Fnew-webmapping%2Fcampo%2Fcampo_001.shp</te_da:URI>
+      <te_da:URI>file%3A%2F%2F%2Fhome%2Fluis%2FTi%2FInpe%2Fnexus%2Fcampo%2Fcampo_001.shp</te_da:URI>
     </te_da:DataSource>
   </te_da:DataSourceList>
 
   <ComponentList/>
 
   <te_map:LayerList>
-    <te_map:DataSetLayer id="ae1dad51-266d-45b0-8162-2406132fae03">
+    <te_map:DataSetLayer id="696542a1-733a-4912-b025-f2111a918f55">
       <te_map:Title>points</te_map:Title>
       <te_map:Visible>NOT_VISIBLE</te_map:Visible>
       <te_map:Encoding>ISO-8859-1</te_map:Encoding>
       <te_map:DataSetName>campo_001</te_map:DataSetName>
-      <te_map:DataSourceId>94d2478d-6131-43b9-912b-74f31d408ae2</te_map:DataSourceId>
+      <te_map:DataSourceId>d84da020-e7df-4a73-8b61-490cfdb8357e</te_map:DataSourceId>
       <te_map:SRSInfo>
         <te_map:SRID>4674</te_map:SRID>
         <te_map:Proj4>+proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs</te_map:Proj4>
